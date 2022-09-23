@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: rgb(192, 185, 185);
+}
+
+#container{
+    width: 90%;
+    margin: 0px auto;
+}
+
+header{
+
+    height: 150px;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    line-height: 150px;
+}
+
+#content{
+    float: left;
+    background: white;
+    width: 90%;
+    height: 700px;
+}
+
+#nombre{
+    background: yellow;
+}
