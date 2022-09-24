@@ -1,26 +1,45 @@
 <html>
     <head>
+        <meta charset="utf-8" />
         <title>
-            ¡ Bienvenido a Trasteros /nombre/!
+            Trasteros /nombre/
         </title>
+        <link rel="stylesheet" href="inicio.css"/>
     </head>
+
     <body>
-        <h1>
-           ¡ Bienvenido a Trasteros "nombre de empresa " !
-        </h1>
-        <h2>
-            Elige la operación que quieras realizar:
-        </h2>
-        <form>
-            <input type="button" value=" Haz click aqui para registrarte">
-        </form>
-        <br>
-        <form>
-            <input type="button" value=" Haz click aqui para modificar tus datos">
-        </form>
-        <br>
-        <form>
-            <input type="button" value=" Haz click aqui para ver el listado de trasteros y modificarlo">
-        </form>
+        
+        <div id="container">
+            <header>
+                <h1>
+                    ¡ Bienvenido a Trasteros "nombre de empresa " !
+                 </h1>
+            </header>
+
+            <h2>
+                Elige la operación que quieras realizar:
+            </h2>
+
+            <a href="registro.html" class="boton" >Haz click aquí para registrarte</a>
+            <br><br>
+            <a href="identificacion.html" class="boton">Haz click aquí para modificar tus datos</a>
+            <br><br>
+            <a href="inicio.html" class="boton">Haz click aquí para ver todos los trasteros y modificarlos</a>
+            
+            <!--
+            <form action="registro.html">
+                <input type="submit" value=" Haz click aqui para registrarte">
+            </form>
+            <br>
+            <form action="identificacion.html">
+                <input type="submit" value=" Haz click aqui para modificar tus datos">
+            </form>
+            <br>
+            <form action="inicio.html">
+                <input type="submit" value=" Haz click aqui para ver el listado de trasteros y modificarlo">
+            </form>
+            -->
+        </div>
+        
     </body>
 </html>
