@@ -1,30 +1,55 @@
-<html>
+<!DOCTYPE html>
+    <html>
     <head>
+        <meta charset="utf-8" />
         <title>
             Registrate en nuestra página web
         </title>
+        <script type="text/javascript" src="fichero.js"></script>
+        <link rel="stylesheet" href="estilosRegistro.css" />
     </head>
 
     <body>
-        <form>
-            Nombre
-            <input type="text" name="nombre" value="Introduzca su nombre">
-            <br>Apellidos
-            <input type="text" name="apellidos" value="Introduzca su apellido">
-            <br>DNI
-            <input type="text" name="DNI" value="Ejemplo: 11111111-Z">
-            <br>Teléfono
-            <input type="text" name="teléfono" value="22222222">
-            <br>Fecha de Nacimiento
-            <input type="date" name="fecha_nac" value="Ejemplo: 1999-08-26">
-            <br>E-mail
-            <input type="text" name="e-mail" value="ejemplo@servidor.com">
-            <br>
-            <input type="submit" value="Enviar">
-	        <input type="reset" value="Borrar">
-        </form>
-
-
-
+        
+        
+            <form action="" method="POST" id="form">
+                <div class="form">
+                    <h1>Registro</h1>
+                <div class="grupo">
+                    <input type="text" name="" id="nombre" required><span class="barra"></span>
+                    <label for="">Nombre</label>
+                </div>
+                <div class="grupo">
+                    <input type="text" name="" id="apellidos"  required><span class="barra"></span>
+                    <label for="">Apellidos</label>
+                </div>
+                <div class="grupo">
+                    <input type="text" name="" id="dni"  required><span class="barra"></span>
+                    <label for="">DNI</label>
+                </div>
+                <div class="grupo">
+                    <input type="text" name="" id="telefono"  required><span class="barra"></span>
+                    <label for="">Telefono</label>
+                </div>
+                <div class="grupo">
+                    <input type="date" name="" id="fecha_nac" required><span class="barra"></span>
+                    <label for="">Fecha Nacimiento</label>
+                </div>
+                <div class="grupo">
+                    <input type="email" name="" id="email" required><span class="barra"></span>
+                    <label for="">E-mail</label>
+                </div>
+                <div class="grupo">
+                    <input type="password" name="" id="password1"  required><span class="barra"></span>
+                    <label for="">Contraseña</label>
+                </div>
+                <div class="grupo">
+                    <input type="password" name="" id="password12" required><span class="barra"></span>
+                    <label for="">Repita la contraseña</label>
+                </div>
+                
+                <button type="submit">Regístrate</button>
+                </div>
+            </form>
     </body>
 </html>
