@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8" />
         <title>
-            Trasteros /nombre/
+            Trasteros - Y MAS
         </title>
         <link rel="stylesheet" type="text/css" href="inicio.css"/>
         <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
@@ -11,22 +11,41 @@
 
     <body>
         
+
         <div id="container">
             <header>
                 <h1>
-                    ¡ Bienvenido a Trasteros "nombre de empresa " !
+                    ¡ Bienvenido a Trasteros Y Más !
                  </h1>
             </header>
 
-            <h2>
-                Elige la operación que quieras realizar:
-            </h2>
-
-            <a href="registro.html" class="boton" >Haz click aquí para registrarte</a>
+            
+            <form id="iniciosesion">
+                <h3 id="text">Identifícate:</h3>
+                <div class="grupo">
+                    <label for="">E-mail</label>
+                    <br>
+                    <input type="email" name="" id="email" ><span class="barra"></span>
+                    
+                </div>
+                <br>
+                <div class="grupo">
+                    <label for="">Contraseña</label>
+                    <br>
+                    <input type="password" name="" id="contraseña" ><span class="barra"></span>
+                    
+                </div>
+                <br>
+                <input type="submit" class="button" value="Enviar">
+	            <input type="reset" class="button" value="Borrar">
+            </form>
+            
+            
+            <a href="registro.html" class="boton" >Registo</a>
+            
+            <!--<a href="identificacion.html" class="boton">Haz click aquí para identificarte</a>*/ -->
             <br><br>
-            <a href="identificacion.html" class="boton">Haz click aquí para modificar tus datos</a>
-            <br><br>
-            <a href="inicio.html" class="boton">Haz click aquí para ver todos los trasteros y modificarlos</a>
+            <a href="inicio.html" class="boton">Ver trasteros</a>
             
             <!--
             <form action="registro.html">
