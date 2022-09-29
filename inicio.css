@@ -1,10 +1,14 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: #2193b0;  /* fallback for old browsers */
-    background: linear-gradient(to right, #6dd5ed, #2193b0);  
+    /*background: #2193b0;  /* fallback for old browsers */
+    /*background: linear-gradient(to right, #6dd5ed, #2193b0);  
     background: linear-gradient(to right, #6dd5ed, #2193b0);
-    
-    
+    */
+    background-image: url(https://josesilva.b-cdn.net/wp-content/uploads/2021/03/CUBRE-EL-SEGURO-DE-HOGAR-EL-TRASTERO-scaled.jpg);
+
+    background-position: center center;
+    background-size: auto;
+   
     
 }
 
@@ -28,9 +32,7 @@ body{
     width: auto;
     margin: 10%;
 }
-#text{
-    
-}
+
 .boton{
     display: inline-block;
     
