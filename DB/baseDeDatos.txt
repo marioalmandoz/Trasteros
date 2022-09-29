@@ -1,0 +1,28 @@
+y
+
+mysql> TEE /home/mario/Trasteros/DB/baseDeDatos.txt;
+mysql> DESCRIBE TRASTERO;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| ID              | int         | NO   | PRI | NULL    |       |
+| nombre          | varchar(20) | YES  |     | NULL    |       |
+| metrosCuadrados | int         | YES  |     | NULL    |       |
+| localizacion    | varchar(20) | YES  |     | NULL    |       |
+| dueño           | varchar(20) | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+5 rows in set (0,00 sec)
+
+mysql> DESCRIBE USUARIO;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| nombreAp | varchar(30) | YES  |     | NULL    |       |
+| DNI      | varchar(9)  | NO   | PRI | NULL    |       |
+| telefono | int         | YES  |     | NULL    |       |
+| fechaNA  | date        | YES  |     | NULL    |       |
+| email    | varchar(30) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0,00 sec)
+
+mysql> QUIT
