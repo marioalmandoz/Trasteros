@@ -1,5 +1,8 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #2193b0;  /* fallback for old browsers */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);  
+    background: linear-gradient(to right, #6dd5ed, #2193b0); 
 }
 #container{
     text-align: center;
@@ -7,8 +10,9 @@ body{
 }
 .boton{
     display: inline-block;
-    background-color: rgb(253, 66, 66);
-    color: white;
+    
+    background-color: white;
+    color: black;
     text-align: center;
     text-decoration: none;
     width: 70%;
