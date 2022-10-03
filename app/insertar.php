@@ -14,9 +14,9 @@ $insertar = "INSERT INTO usuario(nombre, apellido, DNI, telefono, fechaN, email,
 $resultado = mysqli_query($conn, $insertar);
 if($resultado) {
     echo "<script>alert('se ha registrado el usuario con exito');
-    window.location='/home/mario/cyberseguridad/labo0/docker-lamp/app/usuarioIdentificado.php'</script>";
+    window.location='/usuarioIdentificado.php'</script>";
 }else{
-    echo "<script>alert('no se puedo reistrar'); window.history.go(-1);<script>";
+    echo "<script>alert('no se puede registrar'); window.history.go(-1);<script>";
 }
 
 
