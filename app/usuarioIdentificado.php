@@ -2,6 +2,8 @@
 
 <?php 
 include("cn.php");
+session_start()
+
 ?>
 <!DOCTYPE html>
     <html>
@@ -21,7 +23,10 @@ include("cn.php");
             <div id="container">
                 <header>
                     <h1>
-                        ¡ Bienvenido a Trasteros Y Más, #usuario !
+                        ¡ Bienvenido a Trasteros Y Más, 
+                        <?php session_start()
+                         echo $_SESSION['saludo'];
+                        ?> !
                     </h1>
                 </header>
             
