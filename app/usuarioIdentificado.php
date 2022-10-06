@@ -26,10 +26,10 @@ include("cn.php");
                 </header>
             
                 <br><br><br>
-                <a href="Modificaciones.php" class="boton" >Modificar datos</a>
+                <a href="modificaciones.php" class="boton" >Modificar datos</a>
             
                 <br><br><br>
-                <a href="listado.html" class="boton">Ver lista de trasteros</a>
+                <a href="listado.php" class="boton">Ver lista de trasteros</a>
                 <br><br><br><br><br><br><br><br>
                 <a href="" class="boton">cerrar sesión</a>
 

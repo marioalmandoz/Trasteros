@@ -53,7 +53,7 @@ include("cn.php");
                     <label for="">Repita la contraseña</label>
                 </div>
                 
-                <button type="submit">Regístrate</button>
+                <button type="submit">Modificar</button>
                 <p class="warnings" id="warnings"></p>
                 </div>
             </form>

@@ -46,7 +46,7 @@ include("cn.php");
                 </form>
             
             
-                <a href="registro.php" class="boton" >Registo</a>
+                <a href="registro.php" class="boton" >Registro</a>
             
                 <!--<a href="identificacion.html" class="boton">Haz click aquí para identificarte</a>*/ -->
                 <br><br>
