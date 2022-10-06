@@ -1,0 +1,70 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /*background: #2193b0;  /* fallback for old browsers */
+    /*background: linear-gradient(to right, #6dd5ed, #2193b0);  
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    */
+    background-image: url(https://josesilva.b-cdn.net/wp-content/uploads/2021/03/CUBRE-EL-SEGURO-DE-HOGAR-EL-TRASTERO-scaled.jpg);
+
+    background-position: center center;
+    background-size: auto;
+   
+    
+}
+
+
+#container{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    align-items: center;
+    /*text-align:center;*/
+    background-color: white;
+    padding: 2% ;
+    border-radius: 8px;
+}
+#iniciosesion{
+    text-align: center;
+    align-items: center;
+    border: 1px solid grey;
+    text-align: center;
+    border-radius: 8px;
+    width: auto;
+    margin: 10%;
+}
+
+.boton{
+    display: inline-block;
+    
+    /*background-color: white;
+    color: black;*/
+    background: #2193b0;  /* fallback for old browsers */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);  
+    background: linear-gradient(to right, #6dd5ed, #2193b0); 
+
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+    font-size: 20px;
+    padding: 3% 15%;
+    border-radius: 8px;
+    margin: 0;
+        
+}
+
+.button{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2193b0;  /* fallback for old browsers */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);  
+    background: linear-gradient(to right, #6dd5ed, #2193b0); 
+    border: none;
+    display: block;
+    width: 60%;
+    margin:10px auto;
+    color:white;
+    height:40px;
+    font-size: 16px;
+    cursor:pointer;
+    border-radius: 8px;
+}
