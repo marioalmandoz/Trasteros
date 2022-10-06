@@ -19,7 +19,7 @@ form.addEventListener("submit",e=>{
 	let password = /^[a-zA-Z0-9\_\-]{6,16}$/ // 6 a 12 digitos.
 	let telefono = /^\d{8}$/ // 8 números.
     let valorEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    let valorDNI = /^\d{8}[a-zA-Z]$/
+    let valorDNI = /^\d{8}[-][a-zA-Z]$/
 
     if(!nom.test(nombre.value)){
         warnings +=`El nombre no es válido, recuerde solo letras y espacios <br>`
