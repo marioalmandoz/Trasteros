@@ -1,1 +1,0 @@
-mysql> TEE /home/mario/Trasteros/DB/baseDeDatos.txt;
