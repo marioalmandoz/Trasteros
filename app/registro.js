@@ -5,7 +5,7 @@ const dni=document.getElementById("dni")
 const fech_nac=document.getElementById("fecha_nac")
 const email=document.getElementById("email")
 const pass1=document.getElementById("password1")
-const pass2=document.getElementById("password2")
+const pass2=document.getElementById("password12")
 const form =document.getElementById("form")
 const parrafo=document.getElementById("warnings")
 
@@ -13,7 +13,6 @@ const parrafo=document.getElementById("warnings")
 form.addEventListener("submit",e=>{
     e.preventDefault()
     let fallo = false
-    let warnings=""
 	let nom = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
     let apell = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
 	let password = /^[a-zA-Z0-9\_\-]{6,16}$/ // 6 a 12 digitos.
@@ -22,36 +21,39 @@ form.addEventListener("submit",e=>{
     let valorDNI = /^\d{8}[-][a-zA-Z]$/
 
     if(!nom.test(nombre.value)){
-        warnings +=`El nombre no es válido, recuerde solo letras y espacios <br>`
+        alert('El nombre no es válido, recuerde solo letras y espacios')
     }
     if(!apell.test(apellidos.value)){
-        warnings +=`Los apellidos no son válidos, recuerde solo letras y espacios<br>`
+        alert('Los apellidos no son válidos, recuerde solo letras y espacios')
     }
     if(!valorEmail.test(email.value)){
-        warnings+= `El e-mail no es válido, recuerde ejemplo@servidor.extensión <br>`
+        alert('El e-mail no es válido, recuerde ejemplo@servidor.extensión')
         fallo=true
     }
-    if(!valorDNI.test(dni.value)){
-        warnings +=`El DNI no es válido, recuerde 8 letras y letra en mayúscula <br>`
-        fallo=true
+    if(valorDNI.test(dni.value)){
+        numero = dni.value.substr(0,dni.length-2);
+        letr = dni.value.substr(-1);
+        numero = numero % 23;
+        letra='TRWAGMYFPDXBNJZSQVHLCKET';
+        letra=letra.substring(numero,numero+1);
+        if(letr!=letra){
+            alert(`El DNI no existe`)
+            fallo=true
+        }
+    }else{
+        alert('El DNI no cumple el formato 11111111-A')
     }
     if(!telefono.test(tfn.value)){
-        warnings +=`El teléfono debe ser de 8 números <br>`
-        fallo = true
+        alert('El teléfono debe ser de 8 números')
     }
     if(!password.test(pass1.value)){
-        warnings+= `La contraseña no es válida, solo se pueden letras, números, - y _<br>`            
-        fallo= true
+        alert('La contraseña no es válida, solo se pueden letras, números, - y _ ')
+        pass1.focus();
     }
     if(pass2.value != pass1.value){
-        warnings += `Las contraseñas no coinciden <br>`    
-        fallo = true
+        alert('Las contraseñas no coinciden ')   
+        
     }
     
-    
-    if(fallo){
-        parrafo.innerHTML = warnings
-    }
-
 
 })
