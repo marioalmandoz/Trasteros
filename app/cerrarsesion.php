@@ -13,7 +13,7 @@ if (isset($_SESSION['nombre'])) {
     echo "<script>alert('no se ha cerrado la sesion');window.history.go(-1);</script>";
 } else {
     echo "<script>alert('se ha cerrado la sesion con exito');
-    window.location='/inicio.php'</script>";
+    window.history.go(-1);</script>";
 
 }
 ?>

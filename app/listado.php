@@ -10,14 +10,37 @@ include("cn.php");
             <title>
                 Listado de trasteros 
             </title>
-            <!--<link rel="stylesheet" type="text/css" href="inicio.css"/>-->
+            <link rel="stylesheet" type="text/css" href="inicio.css"/>
             <link rel="stylesheet"  type="text/css" href="listado.css">
             <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
 
         </head>
         <header>
-            <div id="titulo"> Datos Trasteros 
-            <br><a href="usuarioIdentificado.php" class="button"> Volver al inicio</a></div></header>
+            <div class="texto">
+                Esta es la lista de nuestros trasteros: 
+                <?php
+                session_start(); 
+                if (isset($_SESSION['nombre'])) {
+                    //sesion iniciada
+                    echo '<a href="" class="botonCabecera"> Contacto</a>';
+                    echo '<a href="cerrarsesion.php" class="botonCabecera"> Cerrar sesion </a>';
+                    echo '<a href="modificaciones.php" class="botonCabecera"> Modifica tus datos</a>';
+                    echo '<a href="usuarioIdentificado.php" class="botonCabecera"> Volver</a>';
+                    echo '<br><br><div class="texto2"> Identificado como   ';
+                    echo  $_SESSION["nombre"];
+                    echo '</div>';
+                } else {
+                    //sesion no iniciada
+                    echo '<a href="" class="botonCabecera"> Contacto</a>';
+                    echo '<a href="registro.php" class="botonCabecera"> Registrate</a>';
+                    echo '<a href="inicio.php" class="botonCabecera"> Inicio</a>';
+    
+                }
+                ?>
+                
+            </div>
+            
+        </header>
         <body>
             <ALIGN:CENTER>
             <table class="content-table">

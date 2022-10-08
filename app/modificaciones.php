@@ -10,7 +10,7 @@ include("cn.php");
     <head>
         <meta charset="utf-8" />
         <title>
-            Moifica tus nuevos datos
+            Modifica tus datos
         </title>
         <script type="text/javascript" src="fichero.js"></script>
         <link rel="stylesheet" href="estilosRegistro.css">

@@ -12,7 +12,25 @@ body{
    
     
 }
+header{
+    margin-top: 50px;
+    width: cover;
+    border-radius: 5px 5px 5px 5px;
+    margin: auto auto;
+    height: 10px;
+    background-color: white;
+    
+    padding-top: 70px;
+    padding-bottom: 70px;
 
+}
+.texto{
+    font-size: 23px;
+    text-align: left;
+    margin-left: 30px;
+    
+    
+}
 
 #container{
     text-align: center;
@@ -36,13 +54,9 @@ body{
 
 .boton{
     display: inline-block;
-    
-    /*background-color: white;
-    color: black;*/
     background: #2193b0;  /* fallback for old browsers */
     background: linear-gradient(to right, #6dd5ed, #2193b0);  
     background: linear-gradient(to right, #6dd5ed, #2193b0); 
-
     color:white;
     text-align: center;
     text-decoration: none;
@@ -55,17 +69,69 @@ body{
 }
 
 .button{
+    display: block;
     font-family: Arial, Helvetica, sans-serif;
     background: #2193b0;  /* fallback for old browsers */
     background: linear-gradient(to right, #6dd5ed, #2193b0);  
     background: linear-gradient(to right, #6dd5ed, #2193b0); 
     border: none;
-    display: block;
-    width: 60%;
-    margin:10px auto;
     color:white;
+    text-align: center;
+    text-decoration: none;
+    width: 60%;
+    font-size: 16px;
+    margin:10px auto;
     height:40px;
+    cursor:pointer;
+    border-radius: 8px;
+}
+.botonCabecera{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2193b0;  /* fallback for old browsers */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);  
+    background: linear-gradient(to right, #6dd5ed, #2193b0); 
+    border: none;
+    padding: 8px 10px;
+    color:white;
     font-size: 16px;
     cursor:pointer;
     border-radius: 8px;
+    text-decoration: none;
+    margin-right: 10px;
+    float: right;
+    
+}
+.botonCabecera::after{
+    display: block;
+    content: '';
+    border-bottom: solid 1px white;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+.botonCabecera:hover::after{
+    transform: scaleX(1);
+}
+
+.boton::after{
+    display: block;
+    content: '';
+    border-bottom: solid 1px white;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+.boton:hover::after{
+    transform: scaleX(1);
+}
+.button::after{
+    display: block;
+    content: '';
+    border-bottom: solid 1px white;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+.button:hover::after{
+    transform: scaleX(1);
 }
