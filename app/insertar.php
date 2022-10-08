@@ -14,7 +14,7 @@ $insertar = "INSERT INTO usuario(nombre, apellido, DNI, telefono, fechaN, email,
 $resultado = mysqli_query($conn, $insertar);
 if($resultado) {
     echo "<script>alert('se ha registrado el usuario con exito');
-    window.location='/usuarioIdentificado.php'</script>";
+    window.location='/uscomo hacer un select en phpuarioIdentificado.php'</script>";
 }else{
     echo "<script>alert('no se puede registrar'); window.history.go(-1);<script>";
 }

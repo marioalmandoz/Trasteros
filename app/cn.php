@@ -1,4 +1,9 @@
 <?php
+    session_start(); 
+?>
+<?php
+
+
   // phpinfo();
   $hostname = "db";
   $username = "admin";

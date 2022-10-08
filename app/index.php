@@ -1,5 +1,10 @@
-
 <?php
+    session_start(); 
+?>
+<?php
+
+ 
+
 include("cn.php");
 
   //echo '<h1>Yeah, it works!<h1>';

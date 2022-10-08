@@ -1,7 +1,9 @@
-
+<?php
+    session_start(); 
+?>
 
 <?php 
-session_start();
+
 include("cn.php");
 
 
@@ -26,7 +28,8 @@ include("cn.php");
                     <h1>
                         ¡ Bienvenido a Trasteros Y Más, 
                         <?php 
-                         echo $_SESSION['usuario'];
+                            $quieneres= $_SESSION['nombre'];
+                            echo $quieneres;
                         ?> !
                     </h1>
                 </header>
