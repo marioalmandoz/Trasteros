@@ -16,7 +16,7 @@ if($resultado) {
     echo "<script>alert('se ha registrado el usuario con exito');
     window.location='/usuarioIdentificado.php'</script>";
 }else{
-    echo "<script>alert('no se puede registrar'); window.history.go(-1);<script>";
+    echo "<script>alert('no se puede registrar'); window.history.go(-1);</script>";
 }
 
 
