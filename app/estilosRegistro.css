@@ -46,16 +46,15 @@ form .grupo{
 input{
     font-size: 18px;
     padding: 10px 10px 10px 5px;
-    background: none;
-    
-    display:block;
     width:100%;
     border: none;
     border-bottom: 1px solid var(--colorTextos);
 }
 input:focus{
     outline:non;
-    color:black;
+    color:yellow;
+    border-color: yellow;
+    box-shadow: 0 0 10px yellow;
 }
 label{
     color: var(--colorTextos);
@@ -73,7 +72,12 @@ input:valid~label{
     font-size:16px;
     color: rgb(98, 206, 98);
 }
-
+input:focus~label, 
+input:invalid~label{
+    top: -20px;
+    font-size: 16px;
+    color: red;
+}
 .barra{
     position: relative;
     display:block;
