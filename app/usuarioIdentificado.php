@@ -39,7 +39,7 @@ include("cn.php");
                 <br><br><br>
                 <a href="listado.php" class="boton">Ver lista de trasteros</a>
                 <br><br><br><br><br><br><br><br>
-                <a href="" class="boton">cerrar sesión</a>
+                <a href="cerrarsesion.php" class="boton">cerrar sesión</a>
 
             
             </div>

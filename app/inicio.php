@@ -1,7 +1,16 @@
 <?php
 session_start();
 include("cn.php");
+
+
+if (isset($_SESSION['nombre'])) {
+    header("Location: usuarioIdentificado.php");
+} else {
+  //do nothing
+
+}
 ?>
+
 
 <!DOCTYPE html>
     <html>
