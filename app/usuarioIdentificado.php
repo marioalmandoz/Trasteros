@@ -1,5 +1,11 @@
 <?php
     session_start(); 
+    if (isset($_SESSION['nombre'])) {
+        //do nothing
+    } else {
+        header("Location: inicio.php");
+    
+    }
 ?>
 
 <?php 
