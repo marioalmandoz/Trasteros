@@ -43,7 +43,7 @@ include("cn.php");
                             <td class=""> <?php echo $row["localizacion"];?></td>
                             <td class=""> <?php echo $row["responsable"];?></td>
                             <td class="">
-                                <a href="editar.php?id=<?php echo $row["id_trastero"];?>" class="">Editar contenido</a> |
+                                <a href="editar.php?id=<?php echo $row["id"];?>" class="">Editar contenido</a> |
                                 <a href="eliminar.php?id=<?php echo $row["id_trastero"];?>" class=""></a>Eliminar trastero</a>
                             </td>
                         </tr>
