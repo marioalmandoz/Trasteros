@@ -10,18 +10,20 @@ include("cn.php");
             <title>
                 Listado de trasteros 
             </title>
-            <link rel="stylesheet" type="text/css" href="inicio.css"/>
+            <!--<link rel="stylesheet" type="text/css" href="inicio.css"/>-->
             <link rel="stylesheet"  type="text/css" href="listado.css">
             <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
 
         </head>
-
+        <header>
+            <div id="titulo"> Datos Trasteros 
+            <br><a href="usuarioIdentificado.php" class=""> Volver al inicio</a></div></header>
         <body>
             <ALIGN:CENTER>
             <table class="content-table">
                 <thead>
                     <tr>
-                        <div class=""> Datos Trasteros <a href="usuarioIdentificado.php" class=""> Volver al inicio</a></div>
+                        
                         <td class="">ID</td>
                         <td class="">Nombre</td>
                         <td class="">MetroCuadrado</td>
