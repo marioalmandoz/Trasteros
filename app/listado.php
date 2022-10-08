@@ -17,7 +17,7 @@ include("cn.php");
         </head>
         <header>
             <div id="titulo"> Datos Trasteros 
-            <br><a href="usuarioIdentificado.php" class=""> Volver al inicio</a></div></header>
+            <br><a href="usuarioIdentificado.php" class="button"> Volver al inicio</a></div></header>
         <body>
             <ALIGN:CENTER>
             <table class="content-table">

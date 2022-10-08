@@ -4,17 +4,42 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    
+    
     }
 header{
-    background: white;
+    margin-top: 50px;
+    margin: 0 auto;
+    width: cover;
+    border-radius: 5px 5px 0 0;
+    height: 200px;
+    
+    background-image: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center center;
+    font-size: 3em;
+
+}
+body{
+    background-image: url(https://josesilva.b-cdn.net/wp-content/uploads/2021/03/CUBRE-EL-SEGURO-DE-HOGAR-EL-TRASTERO-scaled.jpg);
+    background-position: center center;
+    background-size: auto;
+}
+#titulo{
+    margin-top: 50 px;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+    margin: auto auto;
+    width: 350px;
 }
 
 .content-table {
     align-items: center;
     border-collapse: collapse;
     margin: 0 auto;
-    font-size: 0.9em;
-    min-width: 400px;
+    font-size: 1em;
+    width: 80%;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -53,4 +78,19 @@ header{
 .content-table tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+}
+.button{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2193b0;  /* fallback for old browsers */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);  
+    background: linear-gradient(to right, #6dd5ed, #2193b0); 
+    border: none;
+    display: block;
+    width: auto;
+    margin:10px auto;
+    color:white;
+    height:auto;
+    
+    cursor:pointer;
+    border-radius: 8px;
 }
