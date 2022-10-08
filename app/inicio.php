@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 include("cn.php");
 ?>
 
@@ -51,7 +51,7 @@ include("cn.php");
             
                 <!--<a href="identificacion.html" class="boton">Haz click aquí para identificarte</a>*/ -->
                 <br><br>
-                <a href="listado.html" class="boton">Ver lista de trasteros</a>
+                <a href="listado.php" class="boton">Ver lista de trasteros</a>
             
                 <!--
                 <form action="registro.html">

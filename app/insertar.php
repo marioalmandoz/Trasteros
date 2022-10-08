@@ -7,9 +7,9 @@ $dni = $_POST["dni"];
 $telefono = $_POST["telefono"];
 $fechaN = $_POST["fechaN"];
 $email = $_POST["email"];
-$clave = $_POST["clave"];
-
-$insertar = "INSERT INTO usuario(nombre, apellido, DNI, telefono, fechaN, email, contraseña) VALUES ('$nombre', '$apellidos', '$dni', '$telefono', '$fechaN', '$email', '$clave')";
+$clave = $_POST["clave"]; 
+ 
+$insertar = "INSERT INTO Usuario(nombre, apellido, DNI, telefono, fechaN, email, clave) VALUES ('$nombre', '$apellidos', '$dni', '$telefono', '$fechaN', '$email', '$clave')";
 
 $resultado = mysqli_query($conn, $insertar);
 if($resultado) {

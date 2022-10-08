@@ -38,7 +38,7 @@ include("inicio.php")
         <div class="conatiner-table">
            
              <?php /*
-             $resultado = mysqli_query($conn,"SELECT * FROM usuario");
+             $resultado = mysqli_query($conn,"SELECT * FROM Usuario");
                 
 
              while($row = mysqli_fetch_array($resultado)) { ?>
@@ -52,4 +52,4 @@ include("inicio.php")
         </div>        
     </body>
 </html>
-             -->
+             -->      
