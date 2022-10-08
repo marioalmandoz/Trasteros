@@ -38,7 +38,7 @@ include("cn.php");
                     <label for="">Telefono</label>
                 </div>
                 <div class="grupo">
-                    <input type="date" name="fechaN" id="fecha_nac" required ><span class="barra"></span>
+                    <input type="date" name="fechaN" id="fecha_nac" placeholder="18/05/2002" required ><span class="barra"></span>
                     <label for="">Fecha Nacimiento</label>
                 </div>
                 <div class="grupo">
