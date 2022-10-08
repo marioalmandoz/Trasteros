@@ -1,6 +1,6 @@
 <?php
 include("cn.php");
-$trasteros= $conn->query("SELECT * FROM trastero");
+//$trasteros= $conn->query("SELECT * FROM trastero");
 ?>
 
 <!DOCTYPE html>
@@ -16,26 +16,32 @@ $trasteros= $conn->query("SELECT * FROM trastero");
         </head>
 
         <body>
-            <div class="">
-                <div class=""> Datos Trasteros <a href="usuarioIdentificado.php" class=""> Volver al inicio</a></div>
-                <div class="">ID</div>
-                <div class="">Nombre</div>
-                <div class="">MetroCuadrado</div>
-                <div class="">Localizacion</div>
-                <div class="">Responsable</div>
-                <div class="">Operacion</div>
-                <?php $resultado = mysqli_query($conn, $trasteros);
-                while ($row = $trasteros->fetch_assoc())  {?>
-                    <div class=""> <?php echo $row["id"];?></div>
-                    <div class=""> <?php echo $row["nombre"];?></div>
-                    <div class=""> <?php echo $row["metroCuadrado"];?></div>
-                    <div class=""> <?php echo $row["localizacion"];?></div>
-                    <div class=""> <?php echo $row["responsable"];?></div>
-                    <div class="">
-                        <a href="editar.php?id=<?php echo $row["id_trastero"];?>" class="">Editar contenido</a> |
-                        <a href="eliminar.php?id=<?php echo $row["id_trastero"];?>" class=""></a>Eliminar trastero</a>
-                    </div>
-                    <?php } mysqli_free_result($resultado);?>
-            </div>                               
+            <table class="">
+                <tr>
+                    <div class=""> Datos Trasteros <a href="usuarioIdentificado.php" class=""> Volver al inicio</a></div>
+                    <td class="">ID</td>
+                    <td class="">Nombre</td>
+                    <td class="">MetroCuadrado</td>
+                    <td class="">Localizacion</td>
+                    <td class="">Responsable</td>
+                    <td class="">Operacion</td>
+                </tr>
+                <br><br>
+                <?php $resultado = mysqli_query($conn, "SELECT * FROM Trastero");
+                while ($row = mysqli_fetch_array($resultado))  {?>
+                    <tr>
+                        <td class=""> <?php echo $row["id"];?></td>
+                        <td class=""> <?php echo $row["nombre"];?></td>
+                        <td class=""> <?php echo $row["metroCuadrado"];?></td>
+                        <td class=""> <?php echo $row["localizacion"];?></td>
+                        <td class=""> <?php echo $row["responsable"];?></td>
+                        <td class="">
+                            <a href="editar.php?id=<?php echo $row["id_trastero"];?>" class="">Editar contenido</a> |
+                            <a href="eliminar.php?id=<?php echo $row["id_trastero"];?>" class=""></a>Eliminar trastero</a>
+                        </td>
+                    </tr>
+                <?php } mysqli_free_result($resultado);?>
+                        
+                </table>                               
         </body>
     </html>
