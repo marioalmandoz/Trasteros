@@ -1,7 +1,7 @@
 <?php
 include("cn.php");
 $id= $_GET["id"];
-$trasteros= "SELECT * FROM trastero WHERE id_trastero='$id'";
+$trasteros= "SELECT * FROM Trastero WHERE id_trastero='$id'";
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ $trasteros= "SELECT * FROM trastero WHERE id_trastero='$id'";
         </head>
 
         <body>
-            <div class="">
+            <form class="">
                 <div class=""> Datos Trasteros <a href="usuarioIdentificado.php" class=""> Volver al inicio</a></div>
                 <div class="">ID</div>
                 <div class="">Nombre</div>
@@ -27,14 +27,13 @@ $trasteros= "SELECT * FROM trastero WHERE id_trastero='$id'";
                 <div class="">Operacion</div>
                 <?php $resultado = mysqli_query($conn, $trasteros);
                 while($row=mysql_fetch_assoc($resultado))  {?>
-                    <div class=""> <?php echo $row["id"];?></div>
-                    <div class=""> <?php echo $row["nombre"];?></div>
-                    <div class=""> <?php echo $row["metroCuadrado"];?></div>
-                    <div class=""> <?php echo $row["localizacion"];?></div>
-                    <div class=""> <?php echo $row["responsable"];?></div>
-                    <div class="">
+                    <input type="hidden" class="" value="<?php echo $row["id"];?>" name="id"></div>
+                    <input type="text" class="" value="<?php echo $row["nombre"];?>" name="nombre"></div>
+                    <input type="text" class="" value="<?php echo $row["metroCuadrado"];?>" name="metroCuadrado"></div>
+                    <input type="text" class="" value="<?php echo $row["localizacion"];?>" name="localizacion"></div>
+                    <input type="text" class="" value="<?php echo $row["responsable"];?>" name="responsable"></div>
                     <?php } mysqli_free_result($resultado);?>
-            </div>                               
-        
+                    <input type="submit" value="Actualizar" class="">
+                </form>                               
         </body>
     </html>
