@@ -1,5 +1,5 @@
 :root{
-    --colorTextos: black;
+    --colorTextos: red;
 }
 
 
@@ -44,8 +44,11 @@ form .grupo{
 }
 
 input{
+    background: none;
+    color: white;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
+    display: block;
     width:100%;
     border: none;
     border-bottom: 1px solid var(--colorTextos);
@@ -53,12 +56,10 @@ input{
 input:focus{
     outline:non;
     color:yellow;
-    border-color: yellow;
-    box-shadow: 0 0 10px yellow;
 }
 label{
     color: var(--colorTextos);
-    font-size: 16px;
+    font-size: 35px;
     position: absolute;
     left:5px;
     top: 10px;
@@ -66,18 +67,15 @@ label{
     pointer-events: none;
 }
 
+
+
 input:focus~label, 
 input:valid~label{
-    top: -20px;
-    font-size:16px;
+    top: -100px;
+    font-size:300px;
     color: rgb(98, 206, 98);
 }
-input:focus~label, 
-input:invalid~label{
-    top: -20px;
-    font-size: 16px;
-    color: red;
-}
+
 .barra{
     position: relative;
     display:block;
