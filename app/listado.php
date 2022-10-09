@@ -22,7 +22,7 @@ include("cn.php");
                 session_start(); 
                 if (isset($_SESSION['nombre'])) {
                     //sesion iniciada
-                    echo '<a href="" class="botonCabecera"> Contacto</a>';
+                    echo '<a href="contacto.php" class="botonCabecera"> Contacto</a>';
                     echo '<a href="cerrarsesion.php" class="botonCabecera"> Cerrar sesion </a>';
                     echo '<a href="modificaciones.php" class="botonCabecera"> Modifica tus datos</a>';
                     echo '<a href="usuarioIdentificado.php" class="botonCabecera"> Volver</a>';
@@ -31,7 +31,7 @@ include("cn.php");
                     echo '</div>';
                 } else {
                     //sesion no iniciada
-                    echo '<a href="" class="botonCabecera"> Contacto</a>';
+                    echo '<a href="contacto.php" class="botonCabecera"> Contacto</a>';
                     echo '<a href="registro.php" class="botonCabecera"> Registrate</a>';
                     echo '<a href="inicio.php" class="botonCabecera"> Inicio</a>';
     
