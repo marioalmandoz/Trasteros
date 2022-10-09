@@ -62,7 +62,7 @@ input:focus{
 input:not(:focus)::placeholder {
     color: transparent;
 }
-label[for="transicion"]{
+label[for=transicion]{
     color: var(--colorTextos);
     font-size: 16px;
     position: absolute;
