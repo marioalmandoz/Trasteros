@@ -11,43 +11,44 @@
     <body>
         
         
-            <form action="" method="POST" id="form">
+            <form action="insertar.php" method="POST" id="form">
                 <div class="form">
                     <h1>Registro</h1>
                 <div class="grupo">
-                    <input type="text" name="" id="nombre" ><span class="barra"></span>
-                    <label for="">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" required><span class="barra"></span>
+                    <label for="transicion">Nombre</label>
                 </div>
                 <div class="grupo">
-                    <input type="text" name="" id="apellidos"  ><span class="barra"></span>
-                    <label for="">Apellidos</label>
+                    <input type="text" name="apellidos" id="apellidos" required ><span class="barra"></span>
+                    <label for="transicion">Apellidos</label>
                 </div>
                 <div class="grupo">
-                    <input type="text" name="" placeholder="11111111-A" id="dni"  ><span class="barra"></span>
-                    <label for="">DNI</label>
+                    <input type="text" name="dni" placeholder="11111111-A" id="dni" required ><span class="barra"></span>
+                    <label for="transicion">DNI</label>
                 </div>
                 <div class="grupo">
-                    <input type="text" name="" id="telefono"  ><span class="barra"></span>
-                    <label for="">Telefono</label>
+                    <input type="text" name="telefono" id="telefono" @blur="showDatepicker" required ><span class="barra"></span>
+                    <label for="transicion">Telefono</label>
                 </div>
                 <div class="grupo">
-                    <input type="date" name="" id="fecha_nac" ><span class="barra"></span>
-                    <label for="">Fecha Nacimiento</label>
+                    <input type="date" name="fechaN" id="fecha_nac" required ><span class="barra"></span>
+                    <label for="fecha">Fecha Nacimiento</label>
                 </div>
                 <div class="grupo">
-                    <input type="email" name="" placeholder="nombre@servidor.extension" id="email" ><span class="barra"></span>
-                    <label for="">E-mail</label>
+                    <input type="email" name="email" placeholder="nombre@servidor.extension" id="email" required ><span class="barra"></span>
+                    <label for="transicion">E-mail</label>
                 </div>
                 <div class="grupo">
-                    <input type="password" name="" id="password1"  ><span class="barra"></span>
-                    <label for="">Contraseña</label>
+                    <input type="password" name="clave" id="password1" required ><span class="barra"></span>
+                    <label for="transicion">Contraseña</label>
                 </div>
                 <div class="grupo">
-                    <input type="password" name="" id="password12" ><span class="barra"></span>
-                    <label for="">Repita la contraseña</label>
+                    <input type="password" name="clave2" id="password12" required><span class="barra"></span>
+                    <label for="transicion">Repita la contraseña</label>
                 </div>
                 
                 <button type="submit">Regístrate</button>
+                <p class="warnings" id="warnings"></p>
                 </div>
             </form>
             <script type="text/javascript" src="registro.js"></script>

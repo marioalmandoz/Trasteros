@@ -34,12 +34,12 @@ include("cn.php");
                     <label for="">DNI</label>
                 </div>
                 <div class="grupo">
-                    <input type="text" name="telefono" id="telefono" required ><span class="barra"></span>
+                    <input type="text" name="telefono" id="telefono" @blur="showDatepicker" required ><span class="barra"></span>
                     <label for="">Telefono</label>
                 </div>
                 <div class="grupo">
-                    <input type="date" name="fechaN" id="fecha_nac" placeholder="18/05/2002" required ><span class="barra"></span>
-                    <label for="">Fecha Nacimiento</label>
+                    <input type="date" name="fechaN" id="fecha_nac" required ><span class="barra"></span>
+                    <label for="fecha">Fecha Nacimiento</label>
                 </div>
                 <div class="grupo">
                     <input type="email" name="email" placeholder="nombre@servidor.extension" id="email" required ><span class="barra"></span>

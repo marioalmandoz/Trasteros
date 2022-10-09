@@ -62,20 +62,7 @@ input:focus{
 input:not(:focus)::placeholder {
     color: transparent;
 }
-input[type="date"]::-webkit-calendar-picker-indicator {
-    background: transparent;
-    bottom: 0;
-    color: transparent;
-    cursor: pointer;
-    height: auto;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: auto;
-}
-
-label{
+label[for="transicion"]{
     color: var(--colorTextos);
     font-size: 16px;
     position: absolute;
@@ -86,6 +73,14 @@ label{
     
 }
 
+label[for=fecha]{
+    position: absolute;
+    left: 5px;
+    top: -14px;
+    transition: none;
+    font-size: 12px;
+
+}
 
 
 input:focus~label, 
