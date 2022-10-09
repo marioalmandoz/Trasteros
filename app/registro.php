@@ -13,18 +13,7 @@ include("cn.php");
             Registrate en nuestra página web
         </title>
         <link rel="stylesheet" href="estilosRegistro.css" />
-        <link rel="stylesheet" href="listado.css" />
     </head>
-    <header>
-            <div class="texto">
-                <?php
-                    echo '<a href="" class="botonCabecera"> Contacto</a>';
-                    echo '<a href="usuarioIdentificado.php" class="botonCabecera"> Volver</a>';
-                ?>
-                
-            </div>
-            
-        </header>
 
     <body>
         
