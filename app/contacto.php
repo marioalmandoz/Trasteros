@@ -22,7 +22,7 @@ include("cn.php");
                 <a href="#"> <i class="fa fa-map-marked"></i> Barakaldo,Vizcaya,España
                 </a>
             </div>
-            <form action="#" autocomplete="off">
+            <form action="#" autocomplete="off" method="POST" id="form">
                 <input type="email" name="email" placeholder="Correo electrónico" id="email" class="campo">
                 <input type="text" name="asunto" placeholder="Escribe el asunto del mensaje" class="campo">
 
