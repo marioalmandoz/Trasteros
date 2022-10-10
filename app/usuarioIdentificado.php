@@ -44,6 +44,8 @@ include("cn.php");
             
                 <br><br><br>
                 <a href="listado.php" class="boton">Ver lista de trasteros</a>
+                <br><br><br>
+                <a href="contacto.php" class="boton">Contacta con nosotros</a>
                 <br><br><br><br><br><br><br><br>
                 <a href="cerrarsesion.php" class="boton">cerrar sesión</a>
 

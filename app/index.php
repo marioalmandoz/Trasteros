@@ -17,7 +17,7 @@ include("cn.php");
  // }
 ?>
 <?php
-include("inicio.php");
+header("Location: inicio.php");
 ?>
 <?php
 //include("registro.php");

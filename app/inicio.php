@@ -25,8 +25,6 @@ if (isset($_SESSION['nombre'])) {
         </head>
 
         <body>
-        
-
             <div id="container">
                 <header>
                     <h1>
@@ -61,6 +59,8 @@ if (isset($_SESSION['nombre'])) {
                 <!--<a href="identificacion.html" class="boton">Haz click aquí para identificarte</a>*/ -->
                 <br><br>
                 <a href="listado.php" class="boton">Ver lista de trasteros</a>
+                <br><br>
+                <a href="contacto.php" class="boton">Contacta con nosotros</a>
             
                 <!--
                 <form action="registro.html">

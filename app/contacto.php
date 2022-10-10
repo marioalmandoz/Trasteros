@@ -8,12 +8,39 @@ include("cn.php");
         <meta charset="UTF-8">
         <title> Contacta con nosotros </title>
         <link rel="stylesheet" href="contacto.css">
+        <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
         <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     </head>
+    <header>
+            <div class="texto">
+                Contacta con nosotros  
+                <?php
+                session_start(); 
+                if (isset($_SESSION['nombre'])) {
+                    //sesion iniciada
+                    echo '<a href="listado.php" class="botonCabecera"> Lista de trasteros </a>';
+                    echo '<a href="cerrarsesion.php" class="botonCabecera"> Cerrar sesion </a>';
+                    echo '<a href="modificaciones.php" class="botonCabecera"> Modifica tus datos </a>';
+                    echo '<a href="usuarioIdentificado.php" class="botonCabecera"> Inicio </a>';
+                    echo '<br><br><div class="texto2"> Identificado como   ';
+                    echo  $_SESSION["nombre"];
+                    echo '</div>';
+                } else {
+                    //sesion no iniciada
+                    echo '<a href="listado.php" class="botonCabecera"> Lista de trasteros </a>';
+                    echo '<a href="registro.php" class="botonCabecera"> Registrate </a>';
+                    echo '<a href="inicio.php" class="botonCabecera"> Inicio </a>';
+    
+                }
+                ?>
+                
+            </div>
+            
+    </header>
     <body>
         <div class="container-form">
             <div class="info-form">
-                <h2> Contacta con nosotros </h2>
+                
                 <p>Siempre queremos estar al tanto de los problemas que os surjan al usar nuestra web. Si tenéis cualquier duda sobre nuestros trasteros o los contratos de alquiler que ofertamos, preguntádnos sin pestañear. </p>
                 <a href="#"> <i class="fa fa-phone"></i> 944-22-55-77
                 </a>

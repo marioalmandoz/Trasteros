@@ -17,23 +17,23 @@ include("cn.php");
         </head>
         <header>
             <div class="texto">
-                Esta es la lista de nuestros trasteros: 
+                Esta es la lista de nuestros trasteros 
                 <?php
                 session_start(); 
                 if (isset($_SESSION['nombre'])) {
                     //sesion iniciada
-                    echo '<a href="contacto.php" class="botonCabecera"> Contacto</a>';
+                    echo '<a href="contacto.php" class="botonCabecera"> Contacto </a>';
                     echo '<a href="cerrarsesion.php" class="botonCabecera"> Cerrar sesion </a>';
-                    echo '<a href="modificaciones.php" class="botonCabecera"> Modifica tus datos</a>';
-                    echo '<a href="usuarioIdentificado.php" class="botonCabecera"> Volver</a>';
+                    echo '<a href="modificaciones.php" class="botonCabecera"> Modifica tus datos </a>';
+                    echo '<a href="usuarioIdentificado.php" class="botonCabecera"> Inicio </a>';
                     echo '<br><br><div class="texto2"> Identificado como   ';
                     echo  $_SESSION["nombre"];
                     echo '</div>';
                 } else {
                     //sesion no iniciada
-                    echo '<a href="contacto.php" class="botonCabecera"> Contacto</a>';
-                    echo '<a href="registro.php" class="botonCabecera"> Registrate</a>';
-                    echo '<a href="inicio.php" class="botonCabecera"> Inicio</a>';
+                    echo '<a href="contacto.php" class="botonCabecera"> Contacto </a>';
+                    echo '<a href="registro.php" class="botonCabecera"> Registrate </a>';
+                    echo '<a href="inicio.php" class="botonCabecera"> Inicio </a>';
     
                 }
                 ?>
