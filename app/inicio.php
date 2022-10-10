@@ -40,14 +40,14 @@ if (isset($_SESSION['nombre'])) {
                     <div class="grupo">
                         <label for="">E-mail</label>
                         <br>
-                        <input type="email" name="email" id="email" ><span class="barra"></span>
+                        <input type="email" name="email" id="email" ><span class="barra" require></span>
                     
                     </div>
                     <br>
                     <div class="grupo">
                         <label for="">Contraseña</label>
                         <br>
-                        <input type="password" name="clave" id="contraseña" ><span class="barra"></span>
+                        <input type="password" name="clave" id="contraseña"  require><span class="barra"></span>
                     
                     </div>
                     <br>

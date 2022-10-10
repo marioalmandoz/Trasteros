@@ -8,7 +8,7 @@ $localizacion = $_POST["localizacion"];
 $responsable = $_POST["responsable"];
 
 //Actalizar los datos
-$actualizar = "UPDATE Trastero set nombre='$nombre', metroCuadrado='$metroCuadrado', localizacion='$localizacion', responsable='$responsable' WHERE id='$id'";
+$actualizar = "UPDATE Trastero set nombre='$nombre', metroCuadrado=$metroCuadrado, localizacion='$localizacion', responsable='$responsable' WHERE id='$id'";
 
 $resultado = mysqli_query($conn, $actualizar);
 if($resultado) {
