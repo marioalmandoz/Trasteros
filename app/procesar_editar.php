@@ -13,7 +13,7 @@ $actualizar = "UPDATE Trastero set nombre='$nombre', metroCuadrado=$metroCuadrad
 $resultado = mysqli_query($conn, $actualizar);
 if($resultado) {
     echo "<script>alert('se han cambiado los datos con exito');
-    window.location='/editar.php'</script>";
+    window.location='/listado.php'</script>";
 }else{
     echo "<script>alert('no se puedieron actualizar los datos'); window.history.go(-1);</script>";
 }

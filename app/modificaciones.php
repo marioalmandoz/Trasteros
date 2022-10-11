@@ -31,7 +31,7 @@ include("cn.php");
     <body>
         
             
-            <form action="actualzar.php" method="POST" id="form">
+            <form action="actualizar.php" method="POST" id="form">
                 <div class="form">
                     <h1>Modifica tus datos</h1>
                 <div class="grupo">
