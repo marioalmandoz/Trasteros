@@ -26,6 +26,7 @@ include("cn.php");
                     echo '<a href="cerrarsesion.php" class="botonCabecera"> Cerrar sesion </a>';
                     echo '<a href="modificaciones.php" class="botonCabecera"> Modifica tus datos </a>';
                     echo '<a href="usuarioIdentificado.php" class="botonCabecera"> Inicio </a>';
+                    //echo '<a href="anadirTrastero.php" class="botonCabecera"> Añadir Trastero </a>';
                     echo '<br><br><div class="texto2"> Identificado como   ';
                     echo  $_SESSION["nombre"];
                     echo '</div>';
@@ -73,8 +74,17 @@ include("cn.php");
                         </tr>
                     <?php } mysqli_free_result($resultado);?>
                 </tbody>
+                <?php
+                session_start(); 
+                if (isset($_SESSION['nombre'])) {
+                    //sesion iniciada
+                    echo '<a href="anadirTrastero.php" class="botonCabecera"> Añadir Trastero </a>';
+                } else {   
+                    //Sesion no iniciada 
+                }
+                ?>    
             </table> 
             </ALIGN:CENTER>            
-            <script src="confirmacion.js"></sript>                
+            <script src="confirmacion.js"></sript>              
         </body>
     </html>
