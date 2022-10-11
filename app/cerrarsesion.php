@@ -12,7 +12,7 @@ session_start();
 if (isset($_SESSION['nombre'])) {
     echo "<script>alert('no se ha cerrado la sesion');window.history.go(-1);</script>";
 } else {
-    echo "<script>alert('se ha cerrado la sesion con exito');
+    echo "<script>alert('Se ha cerrado la sesión con éxito.');
     window.history.go(-1);</script>";
 
 }

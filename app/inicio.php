@@ -38,14 +38,14 @@ if (isset($_SESSION['nombre'])) {
                     <div class="grupo">
                         <label for="">E-mail</label>
                         <br>
-                        <input type="email" name="email" id="email" ><span class="barra" require></span>
+                        <input type="email" name="email" id="email"  placeholder="nombre@servidor.extension" required>
                     
                     </div>
                     <br>
                     <div class="grupo">
                         <label for="">Contraseña</label>
                         <br>
-                        <input type="password" name="clave" id="contraseña"  require><span class="barra"></span>
+                        <input type="password" name="clave" id="contraseña" placeholder="Introduce tu contraseña" required><span class="barra"></span>
                     
                     </div>
                     <br>

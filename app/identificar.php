@@ -8,9 +8,10 @@ $clave = $_POST["clave"];
 $comprobar = "SELECT * FROM Usuario WHERE email='$email' AND clave='$clave'";
 
 $resultado = mysqli_query($conn, $comprobar);
-//echo "<script>alert($resultado)</script>";
-if($resultado) {
-    echo "<script>alert('se ha identificado el usuario con exito');window.location='/usuarioIdentificado.php'</script>";
+$nombre=$usuario["nombre"];
+
+if($nombre) {
+    echo "<script>alert('Se ha identificado el usuario con éxito.');window.location='/usuarioIdentificado.php'</script>";
     $usuario = mysqli_fetch_array($resultado);
     $_SESSION['nombre']=$usuario["nombre"];
     $_SESSION['apellido']=$usuario["apellido"];
@@ -20,7 +21,7 @@ if($resultado) {
     $_SESSION['email']=$usuario["email"];
     $_SESSION['clave']=$usuario["clave"];
 }else{
-    echo "<script>alert('no se puede identificar debido a que la contraseña o el usuario son incorrectos'); window.location='/inicio.php'</script>";
+    echo "<script>alert('No se puede identificar debido a que la contraseña o el usuario son incorrectos.'); window.location='/inicio.php'</script>";
     //echo "<script>alert('se ha identificado el usuario con exito');window.location='/usuarioIdentificado.php'</script>";
 
 }
