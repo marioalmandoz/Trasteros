@@ -47,7 +47,7 @@ include("cn.php");
                     <label for="transicion">DNI</label>
                 </div>
                 <div class="grupo">
-                    <input type="text" name="telefono" id="telefono" @blur="showDatepicker" required ><span class="barra"></span>
+                    <input type="text" name="telefono" placeholder="666666666" id="telefono" @blur="showDatepicker" required ><span class="barra"></span>
                     <label for="transicion">Telefono</label>
                 </div>
                 <div class="grupo">
@@ -59,7 +59,7 @@ include("cn.php");
                     <label for="transicion">E-mail</label>
                 </div>
                 <div class="grupo">
-                    <input type="password" name="clave" id="password1" required ><span class="barra"></span>
+                    <input type="password" name="clave" placeholder="Entre 6 y 16 caracteres. Solo letras, números, - y _ " id="password1" required ><span class="barra"></span>
                     <label for="transicion">Contraseña</label>
                 </div>
                 <div class="grupo">
