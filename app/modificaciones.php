@@ -12,10 +12,22 @@ include("cn.php");
         <title>
             Modifica tus datos
         </title>
+        <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
         <script type="text/javascript" src="fichero.js"></script>
         <link rel="stylesheet" href="estilosRegistro.css">
     </head>
+    <header>
+            <div class="texto">
+                Modifica aquí tus datos
 
+                <a href="contacto.php" class="botonCabecera"> Contacto </a>
+                <a href="listado.php" class="botonCabecera"> Listado de trasteros </a>
+                <a href="inicio.php" class="botonCabecera"> Volver al inicio </a>
+
+                
+            </div>
+            
+        </header>
     <body>
         
             

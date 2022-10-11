@@ -1,26 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+*{
+    
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*cabecera*/
+header{
+    margin-top: 50px;
+    width: cover;
+    border-radius: 5px 5px 5px 5px;
+    margin: auto auto;
+    height: 25px;
+    background-color: white;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+}
+.texto{
+    font-size: 23px;
+    text-align: left;
+    margin-left: 30px;
+    
+    
+}
+.botonCabecera{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2193b0;  /* fallback for old browsers */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);  
+    background: linear-gradient(to right, #6dd5ed, #2193b0); 
+    border: none;
+    padding: 8px 10px;
+    color:white;
+    font-size: 16px;
+    cursor:pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 10px;
+    float: right;
+    
+}
+.botonCabecera::after{
+    display: block;
+    content: '';
+    border-bottom: solid 1px white;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+.botonCabecera:hover::after{
+    transform: scaleX(1);
+}
+/* */
+
 :root{
     --colorTextos: black;
 }
 
 
-*,::before,::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body{
+    background-image: url(https://josesilva.b-cdn.net/wp-content/uploads/2021/03/CUBRE-EL-SEGURO-DE-HOGAR-EL-TRASTERO-scaled.jpg);
+
+    background-position: center center;
+    background-size: auto;
+
+
     font-family:Arial, Helvetica, sans-serif;
-    background: #2193b0;  /* fallback for old browsers */
-    background: linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    /*background: #2193b0;  /* fallback for old browsers */
+    /*background: linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /**/
     height: 1200px;
-    display:flex;
+    
     justify-content: center;
     align-items: center;
+    
+    
 
 }
+
+
+
 
 h1{
     text-align: center;
@@ -31,10 +92,13 @@ form{
     padding: 40px 0;
     box-shadow: 0 0 6px 0 gray;
     border-radius: 10px;
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .form{
-    width: 100%;
+    width: 90%;
     margin: auto;
 
 }
@@ -42,7 +106,7 @@ form{
 form .grupo{
     position: relative;
     margin: 40px;
-
+    
 }
 
 input{
@@ -126,8 +190,19 @@ button{
     height:40px;
     font-size: 16px;
     cursor:pointer;
+    border-radius: 8px;
 }
-
+button::after{
+    display: block;
+    content: '';
+    border-bottom: solid 1px white;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+button:hover::after{
+    transform: scaleX(1);
+}
 .warnings{
     width: 300px;
     font-size: 16px;
@@ -136,3 +211,4 @@ button{
     padding-top: 20px;
     color: red;
 }
+

@@ -10,17 +10,30 @@ include("cn.php");
     <head>
         <meta charset="utf-8" />
         <title>
-            Registrate en nuestra página web
+            Registrate en nuestra web
         </title>
         <link rel="stylesheet" href="estilosRegistro.css" />
+        <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
     </head>
 
-    <body>
-        
-        
-            <form action="insertar.php" method="POST" id="form">
+    <header>
+            <div class="texto">
+                Regístratate gratis en nuestra web!
+
+                <a href="contacto.php" class="botonCabecera"> Contacto </a>
+                <a href="listado.php" class="botonCabecera"> Listado de trasteros </a>
+                <a href="inicio.php" class="botonCabecera"> Volver al inicio </a>
+
+                
+            </div>
+            
+        </header>
+    <div class="container">
+        <body>
+            
+                <form action="insertar.php" method="POST" id="form">
                 <div class="form">
-                    <h1>Registro</h1>
+                    <h1>Introduce tus datos</h1>
                 <div class="grupo">
                     <input type="text" name="nombre" id="nombre" required><span class="barra"></span>
                     <label for="transicion">Nombre</label>
@@ -59,5 +72,7 @@ include("cn.php");
                 </div>
             </form>
             <script type="text/javascript" src="registro.js"></script>
-    </body>
+        </body>
+    </div>
+   
 </html>
