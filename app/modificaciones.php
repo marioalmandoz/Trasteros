@@ -43,11 +43,11 @@ include("cn.php");
                     <label for="transicion">Apellidos</label>
                 </div>
                 <div class="grupo">
-                    <input type="text" name="dni" id="dni" value="<?php echo $_SESSION['DNI'];?> "required><span class="barra"></span>
+                    <input type="text" name="dni" id="dni" placeholder="11111111-A" value="<?php echo $_SESSION['DNI'];?> "required><span class="barra"></span>
                     <label for="transicion">DNI</label>
                 </div>
                 <div class="grupo">
-                    <input type="text" name="telefono" id="telefono" value="<?php echo $_SESSION['telefono'];?>" required><span class="barra"></span>
+                    <input type="text" name="telefono" id="telefono" placeholder="666666666" value="<?php echo $_SESSION['telefono'];?>" required><span class="barra"></span>
                     <label for="transicion">Telefono</label>
                 </div>
                 <div class="grupo">
@@ -55,11 +55,11 @@ include("cn.php");
                     <label for="fecha">Fecha Nacimiento</label>
                 </div>
                 <div class="grupo">
-                    <input type="email" name="email" id="email" value="<?php echo $_SESSION['email'];?>"required><span class="barra"></span>
+                    <input type="email" name="email" id="email" placeholder="nombre@servidor.extension" value="<?php echo $_SESSION['email'];?>"required><span class="barra"></span>
                     <label for="transicion">E-mail</label>
                 </div>
                 <div class="grupo">
-                    <input type="password" name="clave" id="password1" value="<?php echo $_SESSION['clave'];?>" required><span class="barra"></span>
+                    <input type="password" name="clave" id="password1" placeholder="Entre 6 y 16 caracteres. Solo letras, números, - y _ " value="<?php echo $_SESSION['clave'];?>" required><span class="barra"></span>
                     <label for="transicion">Contraseña</label>
                 </div>
                 <div class="grupo">

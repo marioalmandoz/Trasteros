@@ -17,7 +17,7 @@ form.addEventListener("submit",e=>{
 	let nom = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
     let apell = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
 	let password = /^[a-zA-Z0-9\_\-]{6,16}$/ // 6 a 12 digitos.
-	let telefono = /^\d{9}$/ // 8 números.
+	let telefono = /^\d{9}$/ // 9 números.
     let valorEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     let valorDNI = /^\d{8}[-][a-zA-Z]$/
 
@@ -48,12 +48,12 @@ form.addEventListener("submit",e=>{
         fallo=true
     }
     if(!telefono.test(tfn.value)){
-        alert('El teléfono debe ser de 8 números')
+        alert('El teléfono debe ser de 9 números')
         tfn.focus();
         fallo=true
     }
     if(!password.test(pass1.value)){
-        alert('La contraseña no es válida, solo se pueden letras, números, - y _ ')
+        alert('La contraseña no es válida: debe tener entre 6 y 16 caracteres y solo se pueden utilizar letras, números, - y _ ')
         pass1.focus();
         fallo=true
     }
