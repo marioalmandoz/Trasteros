@@ -12,6 +12,7 @@ include("cn.php");
         <title>
             Añada su trastero
         </title>
+        <script type="text/javascript" src="registro.js"></script>
         <link rel="stylesheet" href="estilosRegistro.css" />
         <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
     </head>
@@ -53,7 +54,8 @@ include("cn.php");
                 <div class="grupo">
                     <input type="text" name="responsable" id="responsable" required ><span class="barra"></span>
                     <label for="fecha">Responsable</label>
-                </div>                
+                </div>       
+
                 <button type="submit">Añadir</button>
                 <p class="warnings" id="warnings"></p>
                 </div>

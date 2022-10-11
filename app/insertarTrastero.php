@@ -11,10 +11,10 @@ $insertar = "INSERT INTO Trastero(id, nombre, metroCuadrado, localizacion, respo
 
 $resultado = mysqli_query($conn, $insertar);
 if($resultado) {
-    echo "<script>alert('se ha registrado el usuario con exito');
+    echo "<script>alert('se ha añadido el trastero con exito');
     window.location='/usuarioIdentificado.php'</script>";
 }else{
-    echo "<script>alert('no se puede registrar'); window.history.go(-1);</script>";
+    echo "<script>alert('no se puede añadir el trastero'); window.history.go(-1);</script>";
 }
 
 
