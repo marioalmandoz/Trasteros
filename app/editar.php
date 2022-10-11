@@ -16,35 +16,49 @@ $id= $_GET["id"];
             <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
 
         </head>
+        <header>
+            <div class="texto">
+                Añade aquí un trastero
 
+                <a href="contacto.php" class="botonCabecera"> Contacto </a>
+                <a href="listado.php" class="botonCabecera"> Listado de trasteros </a>
+                <a href="inicio.php" class="botonCabecera"> Volver al inicio </a>
+
+                
+            </div>
+            
+        </header>
         <body>
             <ALIGN:CENTER>
-            <form action="procesar_editar.php" method="POST"class="content-table">
+            <table class="content-table">    
                 <thead>
                     <tr>
-                        <div class=""> Datos Trasteros <a href="usuarioIdentificado.php" class=""> Volver al inicio</a></div>
-                        <div class="">ID</div>
-                        <div class="">Nombre</div>
-                        <div class="">MetroCuadrado</div>
-                        <div class="">Localizacion</div>
-                        <div class="">Responsable</div>
-                        <div class="">Operacion</div>
+                        <td class="">ID</td>
+                        <td class="">Nombre</td>
+                        <td class="">MetroCuadrado</td>
+                        <td class="">Localizacion</td>
+                        <td class="">Responsable</td>
+                        <td class="">Operacion</td>
+
                     </tr>
                 </thead>
                 <br><br>
                 <tbody>
+                <form action="procesar_editar.php" method="POST"class="content-table">
+
                     <?php $resultado = mysqli_query($conn, "SELECT * FROM Trastero WHERE id='$id'");
                     while($row = mysqli_fetch_array($resultado))  {?>
                         <tr>
-                            <input type="hidden" class="" value="<?php echo $row["id"];?>" name="id"></div>
-                            <input type="text" class="" value="<?php echo $row["nombre"];?>" name="nombre"></div>
-                            <input type="text" class="" value="<?php echo $row["metroCuadrado"];?>" name="metroCuadrado"></div>
-                            <input type="text" class="" value="<?php echo $row["localizacion"];?>" name="localizacion"></div>
-                            <input type="text" class="" value="<?php echo $row["responsable"];?>" name="responsable"></div>
+                            <td><input type="text" readonly="readonly" class="" value="<?php echo $row["id"];?>" name="id"></div></td>
+                            <td><input type="text" class="" value="<?php echo $row["nombre"];?>" name="nombre"></div></td>
+                            <td><input type="text" class="" value="<?php echo $row["metroCuadrado"];?>" name="metroCuadrado"></div></td>
+                            <td><input type="text" class="" value="<?php echo $row["localizacion"];?>" name="localizacion"></div></td>
+                            <td><input type="text" class="" value="<?php echo $row["responsable"];?>" name="responsable"></div></td>
+                            <td><button class="button" type="submit">Actualizar</button>
+                    <p class="warnings" id="warnings"></p></td>
                         </tr>
                     <?php } mysqli_free_result($resultado);?>
-                    <button type="submit">Actualizar</button>
-                    <p class="warnings" id="warnings"></p>
+                    
                 </tbody>
                 </form>
             </ALIGN:CENTER>                             

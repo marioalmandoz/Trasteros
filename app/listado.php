@@ -67,9 +67,9 @@ include("cn.php");
                             <td class=""> <?php echo $row["localizacion"];?></td>
                             <td class=""> <?php echo $row["responsable"];?></td>
                             <td class="">
-                                <a href="editar.php?id=<?php echo $row["id"];?>" class="">Editar contenido</a>
-                                |
-                                <a href="procesar_eliminar.php?id=<?php echo $row["id"];?>" class="content-table">Eliminar trastero</a>
+                                <a href="editar.php?id=<?php echo $row["id"];?>" class="botonp">Editar contenido</a>
+                                
+                                <a href="procesar_eliminar.php?id=<?php echo $row["id"];?>" class="botonp">Eliminar trastero</a>
                             </td>
                         </tr>
                     <?php } mysqli_free_result($resultado);?>
