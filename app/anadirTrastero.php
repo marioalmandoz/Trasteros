@@ -19,7 +19,7 @@ include("cn.php");
 
     <header>
             <div class="texto">
-                Regístratate gratis en nuestra web!
+                Añade aquí un trastero
 
                 <a href="contacto.php" class="botonCabecera"> Contacto </a>
                 <a href="listado.php" class="botonCabecera"> Listado de trasteros </a>
@@ -34,7 +34,7 @@ include("cn.php");
             
                 <form action="insertarTrastero.php" method="POST" id="form">
                 <div class="form">
-                    <h1>Introduce los datos</h1>
+                    <h1>Introduce los datos del trastero</h1>
                 <div class="grupo">
                     <input type="text" name="id" id="id" required><span class="barra"></span>
                     <label for="transicion">id</label>

@@ -78,7 +78,7 @@ include("cn.php");
                 session_start(); 
                 if (isset($_SESSION['nombre'])) {
                     //sesion iniciada
-                    echo '<a href="anadirTrastero.php" class="botonCabecera"> Añadir Trastero </a>';
+                    echo '<a href="anadirTrastero.php" class="botonCabecera"> Añadir Trastero </a><br><br>';
                 } else {   
                     //Sesion no iniciada 
                 }

@@ -8,11 +8,10 @@ $clave = $_POST["clave"];
 $comprobar = "SELECT * FROM Usuario WHERE email='$email' AND clave='$clave'";
 
 $resultado = mysqli_query($conn, $comprobar);
+$usuario = mysqli_fetch_array($resultado);
 $nombre=$usuario["nombre"];
-
-if($nombre) {
+if(strlen($nombre)>0) {
     echo "<script>alert('Se ha identificado el usuario con éxito.');window.location='/usuarioIdentificado.php'</script>";
-    $usuario = mysqli_fetch_array($resultado);
     $_SESSION['nombre']=$usuario["nombre"];
     $_SESSION['apellido']=$usuario["apellido"];
     $_SESSION['DNI']=$usuario["DNI"];
