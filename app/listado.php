@@ -26,7 +26,7 @@ include("cn.php");
                     echo '<a href="cerrarsesion.php" class="botonCabecera"> Cerrar sesion </a>';
                     echo '<a href="modificaciones.php" class="botonCabecera"> Modifica tus datos </a>';
                     echo '<a href="usuarioIdentificado.php" class="botonCabecera"> Inicio </a>';
-                    //echo '<a href="anadirTrastero.php" class="botonCabecera"> Añadir Trastero </a>';
+                    echo '<a href="anadirTrastero.php" class="botonCabecera"> Añadir Trastero </a>';
                     echo '<br><br><div class="texto2"> Identificado como   ';
                     echo  $_SESSION["nombre"];
                     echo '</div>';
@@ -53,7 +53,7 @@ include("cn.php");
                         <td class="">MetroCuadrado</td>
                         <td class="">Localizacion</td>
                         <td class="">Responsable</td>
-                        <td class="">Operacion</td>
+                        <td class="">Operaciones</td>
                     </tr>
                 </thead>
                 <br><br>
@@ -68,23 +68,22 @@ include("cn.php");
                             <td class=""> <?php echo $row["responsable"];?></td>
                             <td class="">
                                 <a href="editar.php?id=<?php echo $row["id"];?>" class="botonp">Editar contenido</a>
-                                
-                                <a href="procesar_eliminar.php?id=<?php echo $row["id"];?>" class="botonp">Eliminar trastero</a>
+                                <input type="button" onClick="eliminar(<?php echo $row['id']; ?>)"  class="botonp" value="Eliminar Trastero">
                             </td>
                         </tr>
+                        <script language="javascript">
+                            function eliminar(id) {
+                                if (confirm("¿Está seguro de que desea eliminar este trastero?")){
+                                    window.location.href='procesar_eliminar.php?id=' +id+'';
+                                    return true;
+                                }
+                            }
+                        </script>
+}
                     <?php } mysqli_free_result($resultado);?>
                 </tbody>
-                <?php
-                session_start(); 
-                if (isset($_SESSION['nombre'])) {
-                    //sesion iniciada
-                    echo '<a href="anadirTrastero.php" class="botonCabecera"> Añadir Trastero </a><br><br>';
-                } else {   
-                    //Sesion no iniciada 
-                }
-                ?>    
             </table> 
             </ALIGN:CENTER>            
-            <script src="confirmacion.js"></sript>              
+                        
         </body>
     </html>

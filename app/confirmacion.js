@@ -1,12 +1,15 @@
-function confirmacion(e) {
+function eliminar(id) {
     if (confirm("¿Está seguro de que desea eliminar este trastero?")){
+        window.location.href='procesar_eliminar.php?id=' +id+'';
         return true;
-    } else {
-        e.preventDefault();
     }
 }
-let linkDelete = document.querySelectorAll(".content-table");
-
-for(var i = 0; i < linkDelete.length; i++) {
-    linkDelete[i].addEventListener('click', confirmacion);
+/*<script language="javascript">
+function eliminar(id) {
+    if (confirm("¿Está seguro de que desea eliminar este trastero?")){
+        window.location.href='procesar_eliminar.php?id=' +id+'';
+        return true;
+    }
 }
+</script>
+*/
