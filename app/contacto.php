@@ -44,13 +44,13 @@ include("cn.php");
                 <p>Siempre queremos estar al tanto de los problemas que os surjan al usar nuestra web. Si tenéis cualquier duda sobre nuestros trasteros o los contratos de alquiler que ofertamos, preguntádnos sin pestañear. </p>
                 <a href="#"> <i class="fa fa-phone"></i> 944-22-55-77
                 </a>
-                <a href="#"> <i class="fa fa-envelope"></i> alquilaTuTrastero@gmail.com
+                <a href="#"> <i class="fa fa-envelope"></i> alquilaTuTrasteroSGSSI@gmail.com
                 </a>
                 <a href="#"> <i class="fa fa-map-marked"></i> Barakaldo,Vizcaya,España
                 </a>
             </div>
-            <form action="#" autocomplete="off" method="POST" id="form">
-                <input type="email" name="email" placeholder="Correo electrónico" id="email" class="campo" required>
+            <form action="https://formsubmit.co/alquilaTuTrasteroSGSSI@gmail.com" method="POST" id="form">
+                <input type="email" name="email" placeholder="Correo electrónico: ejemplo@servidor.extensión" id="email" class="campo" required>
                 <input type="text" name="asunto" placeholder="Escribe el asunto del mensaje" class="campo" required>
 
                 <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
@@ -60,6 +60,6 @@ include("cn.php");
 
             </form>
         </div>
-        <script type="text/javascript" src="contacto.js"></script>
+       <!-- <script type="text/javascript" src="contacto.js"></script> -->
     </body>
 </html>
