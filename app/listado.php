@@ -79,7 +79,7 @@ include("cn.php");
                                 }
                             }
                         </script>
-}
+
                     <?php } mysqli_free_result($resultado);?>
                 </tbody>
             </table> 
