@@ -1,5 +1,5 @@
 <?php
-inclue("cn.php");
+include("cn.php");
 
 $nombre = $_POST["nombre"];
 $apellidos = $_POST["apellidos"];

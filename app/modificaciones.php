@@ -13,7 +13,7 @@ include("cn.php");
             Modifica tus datos
         </title>
         <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
-        <script type="text/javascript" src="fichero.js"></script>
+        
         <link rel="stylesheet" href="estilosRegistro.css">
     </head>
     <header>
@@ -71,5 +71,8 @@ include("cn.php");
                 <p class="warnings" id="warnings"></p>
                 </div>
             </form>
+
+            <script type="text/javascript" src="registro.js"></script>
     </body>
+    
 </html>
