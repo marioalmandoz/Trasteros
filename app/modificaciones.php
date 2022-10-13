@@ -43,7 +43,7 @@ include("cn.php");
                     <label for="transicion">Apellidos</label>
                 </div>
                 <div class="grupo">
-                    <input type="text" name="dni" id="dni" placeholder="11111111-A" value="<?php echo $_SESSION['DNI'];?> "required><span class="barra"></span>
+                    <input type="text" name="dni" id="dni" placeholder="11111111-A" value="<?php echo $_SESSION['DNI'];?>"required><span class="barra"></span>
                     <label for="transicion">DNI</label>
                 </div>
                 <div class="grupo">
