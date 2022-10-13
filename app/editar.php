@@ -18,7 +18,7 @@ $id= $_GET["id"];
         </head>
         <header>
             <div class="texto">
-                Añade aquí un trastero
+                Edita aquí el trastero
 
                 <a href="contacto.php" class="botonCabecera"> Contacto </a>
                 <a href="listado.php" class="botonCabecera"> Listado de trasteros </a>
