@@ -53,7 +53,7 @@ include("cn.php");
                 </div>
                 <div class="grupo">
                     <input type="text" name="responsable" id="responsable" required ><span class="barra"></span>
-                    <label for="fecha">Responsable</label>
+                    <label for="transicion">Responsable</label>
                 </div>       
 
                 <button type="submit">Añadir</button>

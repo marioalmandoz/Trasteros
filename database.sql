@@ -67,10 +67,10 @@ CREATE TABLE `Usuario` (
 --
 
 INSERT INTO `Usuario` (`nombre`, `apellido`, `DNI`, `telefono`, `fechaN`, `email`, `clave`) VALUES
-('pepe', 'pepe', '23451223E', 212121122, '2022-10-05', 'pepe@gmail.com', 'pepe'),
-('mario', 'mario', '2656625-F', 56236995, '2003-02-20', 'mario@gmail.com', 'mario'),
-('Alejandro', 'Gómez', '37276341-B', 888888888, '2022-10-08', 'alejandro@gmail.com', 'alejandro'),
-('pepe', 'mono', '56321458E', 56236995, '2002-02-20', 'pepe@gmail.com', '');
+('pepe',      'pepe',   '44339206-J', 212121122, '2022-10-05', 'pepe@gmail.com', 'pepe12'),
+('mario',     'mario',  '13806705-N', 562369959, '2003-02-20', 'mario@gmail.com', 'mario1'),
+('Alejandro', 'Gómez',  '07254129-K', 888888888, '2022-10-08', 'alejandro@gmail.com', 'alejandro'),
+('pepe',      'mono',   '44963475-Q', 562369959, '2002-02-20', 'pepe@gmail.com', 'pepe13');
 
 --
 -- Índices para tablas volcadas

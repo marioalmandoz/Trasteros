@@ -13,7 +13,7 @@ include("cn.php");
             Modifica tus datos
         </title>
         <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
-        <script type="text/javascript" src="fichero.js"></script>
+        
         <link rel="stylesheet" href="estilosRegistro.css">
     </head>
     <header>
@@ -43,7 +43,7 @@ include("cn.php");
                     <label for="transicion">Apellidos</label>
                 </div>
                 <div class="grupo">
-                    <input type="text" name="dni" id="dni" placeholder="11111111-A" value="<?php echo $_SESSION['DNI'];?> "required><span class="barra"></span>
+                    <input type="text" name="dni" id="dni" placeholder="11111111-A" value="<?php echo $_SESSION['DNI'];?>"required><span class="barra"></span>
                     <label for="transicion">DNI</label>
                 </div>
                 <div class="grupo">
@@ -71,5 +71,8 @@ include("cn.php");
                 <p class="warnings" id="warnings"></p>
                 </div>
             </form>
+
+            <script type="text/javascript" src="registro.js"></script>
     </body>
+    
 </html>
