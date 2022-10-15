@@ -49,6 +49,7 @@ include("cn.php");
                 <a href="#"> <i class="fa fa-map-marked"></i> Barakaldo,Vizcaya,España
                 </a>
             </div>
+            <!-- enviar mensaje -->
             <form action="https://formsubmit.co/alquilaTuTrasteroSGSSI@gmail.com" method="POST" id="form">
                 <input type="email" name="email" placeholder="Correo electrónico: ejemplo@servidor.extensión" id="email" class="campo" required>
                 <input type="text" name="asunto" placeholder="Escribe el asunto del mensaje" class="campo" required>

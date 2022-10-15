@@ -47,8 +47,10 @@ $id= $_GET["id"];
                 <form action="procesar_editar.php" method="POST"class="content-table">
 
                     <?php $resultado = mysqli_query($conn, "SELECT * FROM Trastero WHERE id='$id'");
+                    //while para crear tabla
                     while($row = mysqli_fetch_array($resultado))  {?>
                         <tr>
+                            
                             <td><input type="text" readonly="readonly" class="" value="<?php echo $row["id"];?>" name="id"></div></td>
                             <td><input type="text" class="" value="<?php echo $row["nombre"];?>" name="nombre"></div></td>
                             <td><input type="text" class="" value="<?php echo $row["metroCuadrado"];?>" name="metroCuadrado"></div></td>

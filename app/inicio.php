@@ -1,12 +1,14 @@
 <?php
+//sesion php y conexion con base de dadtos
 session_start();
 include("cn.php");
 
 
 if (isset($_SESSION['nombre'])) {
+    //identificado - redirigir 
     header("Location: usuarioIdentificado.php");
 } else {
-  //do nothing
+  //no identificado
 
 }
 ?>

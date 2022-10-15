@@ -1,10 +1,12 @@
 <?php
+//sesion php
     session_start(); 
 ?>
 <?php
+//conexion con base de datos
 include("cn.php");
 ?>
-
+<!--html de añadir trastero -->
 <!DOCTYPE html>
     <html>
     <head>
@@ -30,7 +32,7 @@ include("cn.php");
         </header>
     <div class="container">
         <body>
-            
+                
                 <form action="insertarTrastero.php" method="POST" id="form">
                 <div class="form">
                     <h1>Introduce los datos del trastero</h1>
@@ -59,7 +61,8 @@ include("cn.php");
                 <p class="warnings" id="warnings"></p>
                 </div>
             </form>
-            <script type="text/javascript" src="anadirTrastero.js"></script>
+            <!-- script js -->
+            <script type="text/javascript" src="anadirTrastero.js"></script> 
         </body>
     </div>
    
