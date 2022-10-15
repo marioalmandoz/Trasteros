@@ -1,5 +1,5 @@
 <?php
-//iniciar sesion
+  //iniciar sesion
     session_start(); 
 ?>
 <?php
