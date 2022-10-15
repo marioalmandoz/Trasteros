@@ -12,7 +12,6 @@ include("cn.php");
         <title>
             Añada su trastero
         </title>
-        <script type="text/javascript" src="registro.js"></script>
         <link rel="stylesheet" href="estilosRegistro.css" />
         <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
     </head>
@@ -44,7 +43,7 @@ include("cn.php");
                     <label for="transicion">Nombre</label>
                 </div>
                 <div class="grupo">
-                    <input type="number" name="metrosCuadrados" placeholder="introduzca un numero" id="dni" required ><span class="barra"></span>
+                    <input type="number" name="metrosCuadrados" placeholder="introduzca un numero" id="m2" required ><span class="barra"></span>
                     <label for="transicion">MetrosCuadrados</label>
                 </div>
                 <div class="grupo">
@@ -60,7 +59,7 @@ include("cn.php");
                 <p class="warnings" id="warnings"></p>
                 </div>
             </form>
-            <script type="text/javascript" src="registro.js"></script>
+            <script type="text/javascript" src="anadirTrastero.js"></script>
         </body>
     </div>
    
