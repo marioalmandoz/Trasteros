@@ -6,8 +6,10 @@ Obtención
 Nuestra página web está situada en un directorio público en GitHub, donde hemos trabajado durante nuestro tiempo de trabajo. Para obtenerla utilizaremos git, programa que deberá estar instalado en nuestro sistema, mediante el siguiente comando clonamos el repositorio en nuestros archivos. 
 $git clone git@github.com:marioalmandoz/Trasteros.git
 Despliegue
-	El despliegue de la página web lo haremos mediante Docker, por lo tanto tendremos que tener instalado docker-compose, en el caso de que no esté instalado lo podremos instalar mediante el siguiente comando:
+	El despliegue de la página web lo haremos mediante Docker, por lo tanto tendremos que tener instalado docker-compose, en el caso de que no esté instalado lo podremos instalar mediante el siguiente comando: 
+	~~~
 	$sudo git install docker-compose
+	~~~
 A continuación nos tendremos que situar en la terminal dentro del archivo anteriormente clonado, y una vez dentro crearemos la imagen de la web con el siguente comando:
 	$docker build -t=”web” .
 Una vez tenemos la imagen, cada vez que queramos desplegar la imagen nos situaremos en la terminal dentro del archivo y ejecutaremos el siguiente comando:
