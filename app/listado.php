@@ -1,5 +1,5 @@
-<!-- Conexion con la base de datos-->
 <?php
+//Conexion con la base de datos
 include("cn.php");
 ?>
 <!-- Pagina html de listado los de los trasteros-->

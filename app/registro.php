@@ -1,4 +1,3 @@
-
 <?php
     session_start(); 
     //Conexion con la base de datos e inicio de sesion
