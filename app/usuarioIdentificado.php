@@ -1,8 +1,9 @@
+<!-- Conexion con la base de datos e inicio de sesion-->
 <?php
     session_start(); 
-    if (isset($_SESSION['nombre'])) {
+    if (isset($_SESSION['nombre'])) {// identificado 
         //do nothing
-    } else {
+    } else {//no identificado
         header("Location: inicio.php");
     
     }
@@ -14,6 +15,7 @@ include("cn.php");
 
 
 ?>
+<!-- Pagina html de usuarioIdentificado-->
 <!DOCTYPE html>
     <html>
         <head>

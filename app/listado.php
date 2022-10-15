@@ -1,8 +1,8 @@
+<!-- Conexion con la base de datos-->
 <?php
 include("cn.php");
-//$trasteros= $conn->query("SELECT * FROM trastero");
 ?>
-
+<!-- Pagina html de listado los de los trasteros-->
 <!DOCTYPE html>
     <html>
         <head>
@@ -42,7 +42,7 @@ include("cn.php");
             </div>
             
         </header>
-        <body>
+        <body><!-- Tabla de los trasteros --> 
             <ALIGN:CENTER>
             <table class="content-table">
                 <thead>
