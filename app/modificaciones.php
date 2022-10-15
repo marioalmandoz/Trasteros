@@ -1,10 +1,11 @@
+<!-- Conexion con la base de datos e inicio de sesion-->
 <?php
     session_start(); 
 ?>
 <?php
 include("cn.php");
 ?>
-
+<!-- Pagina html de modificar los datos del usuario-->
 <!DOCTYPE html>
     <html>
     <head>
@@ -16,7 +17,7 @@ include("cn.php");
         
         <link rel="stylesheet" href="estilosRegistro.css">
     </head>
-    <header>
+    <header><!--Cabecera -->
             <div class="texto">
                 Modifica aquí tus datos
 
@@ -31,7 +32,7 @@ include("cn.php");
     <body>
         
             
-            <form action="actualizar.php" method="POST" id="form">
+            <form action="actualizar.php" method="POST" id="form"><!--Formulario -->
                 <div class="form">
                     <h1>Modifica tus datos</h1>
                 <div class="grupo">

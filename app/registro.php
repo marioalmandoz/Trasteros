@@ -1,10 +1,11 @@
+<!-- Conexion con la base de datos e inicio de sesion-->
 <?php
     session_start(); 
 ?>
 <?php
 include("cn.php");
 ?>
-
+<!-- Pagina html de Registro-->
 <!DOCTYPE html>
     <html>
     <head>

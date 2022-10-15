@@ -1,12 +1,14 @@
 <?php
+//conexion con la base de datos 
 include("cn.php");
-
+//obtener datos del formulario
 $id = $_POST["id"];
 $nombre = $_POST["nombre"];
 $metrosCuadrados = $_POST["metrosCuadrados"];
 $localizacion = $_POST["localizacion"];
 $responsable = $_POST["responsable"];
  
+// Insertar Trastero
 $insertar = "INSERT INTO Trastero(id, nombre, metroCuadrado, localizacion, responsable) VALUES ('$id', '$nombre', $metrosCuadrados, '$localizacion', '$responsable')";
 
 $resultado = mysqli_query($conn, $insertar);
