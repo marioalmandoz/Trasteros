@@ -1,10 +1,10 @@
 # Trasteros
-Sistema web construido con HTML, CSS, JavaScript y PHP para la asignatura Sistemas de Gestión de Seguridad de Sistemas de Información
+Sistema web construido con HTML, CSS, JavaScript y PHP para la asignatura Sistemas de Gestión de Seguridad de Sistemas de Información.
 La web consistirá en una página de una empresa de alquiler de trasteros.
 ---
 Componentes del grupo: Aimar Sagasti, Alejando Gomez y Mario Almandoz.
-___
-Obtención
+***
+Obtención:
 ***
 Nuestra página web está situada en un directorio público en GitHub, donde hemos trabajado durante nuestro tiempo de trabajo. Para obtenerla utilizaremos git, programa que deberá estar instalado en nuestro sistema, mediante el siguiente comando clonamos el repositorio en nuestros archivos.
 ~~~
