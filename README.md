@@ -13,15 +13,25 @@ Despliegue
 	$sudo git install docker-compose
 ~~~
 A continuación nos tendremos que situar en la terminal dentro del archivo anteriormente clonado, y una vez dentro crearemos la imagen de la web con el siguente comando:
+~~~
 	$docker build -t=”web” .
+~~~
 Una vez tenemos la imagen, cada vez que queramos desplegar la imagen nos situaremos en la terminal dentro del archivo y ejecutaremos el siguiente comando:
+~~~
 	$docker-compose up
+~~~
 Con este comando lo que hace es lanzar la imagen de la pagina web al puerto 81 y en el puerto 8890 tendremos la aplicación de phpMyAdmin  a la que podemos acceder mediante los siguientes datos: 
 usuario: admin.
 contraseña: test.
 Una vez iniciada la sesión debemos importar el archivo database.sql para obtener los datos de la página web. 
 
-Tras realizar estos pasos solo nos quedará buscar en el buscador “localhost:81” y ya estaremos en la página de inicio.
+Tras realizar estos pasos solo nos quedará buscar en el buscador:
+~~~
+localhost:81
+~~~
+y ya estaremos en la página de inicio.
 
 Para finalizar el despliegue, lo haremos desde el mismo lugar en la terminal mediante el siguiente comando:
+~~~
 	$docker-compose down
+~~~
