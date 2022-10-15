@@ -5,7 +5,7 @@ La web consistirá en una página de una empresa de alquiler de trasteros.
 Obtención
 Nuestra página web está situada en un directorio público en GitHub, donde hemos trabajado durante nuestro tiempo de trabajo. Para obtenerla utilizaremos git, programa que deberá estar instalado en nuestro sistema, mediante el siguiente comando clonamos el repositorio en nuestros archivos.
 ~~~
-$git clone git@github.com:marioalmandoz/Trasteros.git
+	$git clone git@github.com:marioalmandoz/Trasteros.git
 ~~~
 Despliegue
 	El despliegue de la página web lo haremos mediante Docker, por lo tanto tendremos que tener instalado docker-compose, en el caso de que no esté instalado lo podremos instalar mediante el siguiente comando: 
@@ -27,7 +27,7 @@ Una vez iniciada la sesión debemos importar el archivo database.sql para obtene
 
 Tras realizar estos pasos solo nos quedará buscar en el buscador:
 ~~~
-localhost:81
+	localhost:81
 ~~~
 y ya estaremos en la página de inicio.
 
