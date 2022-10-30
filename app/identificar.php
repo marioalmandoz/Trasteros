@@ -7,23 +7,27 @@ $email = $_POST["email"];
 $clave = $_POST["clave"];
 
 //select
-
+//crear consulta parametrizada
+//preparar
 if (!($sentencia = $conn->prepare("SELECT * FROM Usuario WHERE email = ? AND clave = ? "))) {
     echo "Falló la preparación: (" . $mysqli->errno . ") " . $mysqli->error;
 }
 
-
+//comprobar parametros
 if (!$sentencia->bind_param("ss", $email, $clave)) {
     echo "Falló la vinculación de parámetros: (" . $sentencia->errno . ") " . $sentencia->error;
 }
-
+//ejecutar
 if (!$sentencia->execute()) {
     echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
     echo "<script>alert('No se puede identificar debido a que la contraseña o el usuario son incorrectos.'); window.location='/inicio.php'</script>";
 
-}else {
+}else {//la ejecuacion es correcta
+
+    //comprobar si existe un usuario con ese mail y contraseña
     $sentencia-> bind_result($nombre, $apellido, $DNI, $telefono, $fechaN, $email, $clave);
     $sentencia->fetch();
+    
     if(strlen($nombre)>0) {
         //si existe
         echo "<script>alert('Se ha identificado el usuario con éxito.');window.location='/usuarioIdentificado.php'</script>";
