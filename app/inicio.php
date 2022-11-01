@@ -12,7 +12,14 @@ if (isset($_SESSION['nombre'])) {
 
 }
 ?>
+<?php
+include "log.class.php";
+ 
+$log = new Log("log", "./logs/");
+ 
+echo $log->insert('Esto es un test!', false, true, true);
 
+?>
 
 <!DOCTYPE html>
     <html>
