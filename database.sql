@@ -69,8 +69,7 @@ CREATE TABLE `Usuario` (
 INSERT INTO `Usuario` (`nombre`, `apellido`, `DNI`, `telefono`, `fechaN`, `email`, `clave`) VALUES
 ('pepe',      'pepe',   '44339206-J', 212121122, '2022-10-05', 'pepe@gmail.com', 'pepe12'),
 ('mario',     'mario',  '13806705-N', 562369959, '2003-02-20', 'mario@gmail.com', 'mario1'),
-('Alejandro', 'Gómez',  '07254129-K', 888888888, '2022-10-08', 'alejandro@gmail.com', 'alejandro'),
-('pepe',      'mono',   '44963475-Q', 562369959, '2002-02-20', 'pepe@gmail.com', 'pepe13');
+('Alejandro', 'Gómez',  '07254129-K', 888888888, '2022-10-08', 'alejandro@gmail.com', 'alejandro');
 
 --
 -- Índices para tablas volcadas
@@ -86,7 +85,7 @@ ALTER TABLE `Trastero`
 -- Indices de la tabla `Usuario`
 --
 ALTER TABLE `Usuario`
-  ADD PRIMARY KEY (`DNI`);
+  ADD PRIMARY KEY (`email`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

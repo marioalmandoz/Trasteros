@@ -4,17 +4,19 @@ session_start();
 include("cn.php");
 //obtener datos formulario
 $email = $_POST["email"];
-$clave = $_POST["clave"];
+$contraseña = $_POST["clave"];
 
 //select
 //crear consulta parametrizada
 //preparar
-if (!($sentencia = $conn->prepare("SELECT * FROM Usuario WHERE email = ? AND clave = ? "))) {
+
+
+if (!($sentencia = $conn->prepare("SELECT * FROM Usuario WHERE email = ?"))) {
     echo "Falló la preparación: (" . $mysqli->errno . ") " . $mysqli->error;
 }
 
 //comprobar parametros
-if (!$sentencia->bind_param("ss", $email, $clave)) {
+if (!$sentencia->bind_param("s", $email)) {
     echo "Falló la vinculación de parámetros: (" . $sentencia->errno . ") " . $sentencia->error;
 }
 //ejecutar
@@ -28,7 +30,7 @@ if (!$sentencia->execute()) {
     $sentencia-> bind_result($nombre, $apellido, $DNI, $telefono, $fechaN, $email, $clave);
     $sentencia->fetch();
     
-    if(strlen($nombre)>0) {
+    if(strlen($nombre)>0 && password_verify($contraseña,$clave)) {
         //si existe
         echo "<script>alert('Se ha identificado el usuario con éxito.');window.location='/usuarioIdentificado.php'</script>";
         //guardar los datos del usuario en la variable de sesion
