@@ -61,13 +61,17 @@ include("cn.php");
                     <?php $resultado = mysqli_query($conn, "SELECT * FROM Trastero");
                     while ($row = mysqli_fetch_array($resultado))  {?>
                         <tr>
+                            
                             <td class=""> <?php echo $row["id"];?></td>
                             <td class=""> <?php echo $row["nombre"];?></td>
                             <td class=""> <?php echo $row["metroCuadrado"];?></td>
                             <td class=""> <?php echo $row["localizacion"];?></td>
                             <td class=""> <?php echo $row["responsable"];?></td>
                             <td class="">
-                                <a href="editar.php?id=<?php echo $row["id"];?>" class="botonp">Editar contenido</a>
+                            <form action="editar.php" method="POST">
+                                <input hidden readonly="readonly" type="" name="id" value="<?php echo $row["id"];?>">
+                                <input type="submit" class="botonp" value="Editar contenido" > <!-- href="editar.php?id=?php echo $row["id"];?>" -->
+                            </form>
                                 <input type="button" onClick="eliminar(<?php echo $row['id']; ?>)"  class="botonp" value="Eliminar Trastero">
                             </td>
                         </tr>

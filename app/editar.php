@@ -1,6 +1,8 @@
 <?php
 include("cn.php");
-$id= $_GET["id"];
+
+//obtener datos formulario
+$id= $_POST["id"];
 //s$trasteros= "SELECT * FROM Trastero WHERE id='$id'";
 ?>
 
