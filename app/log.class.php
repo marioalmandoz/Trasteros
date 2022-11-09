@@ -1,6 +1,6 @@
 <?php
 class Log
-{
+{ 
 public function __construct($filename, $path)
 {
 $this->path     = ($path) ? $path : "/";
