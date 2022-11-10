@@ -15,7 +15,7 @@ if (isset($_SESSION["locked"])){
         unset($_SESSION["login_attempts"]);
     }else{
         //continuar con el bloqueo
-        echo "<script>alert('Ha superado el límite de intentos fallidos, por favor, intentelo de nuevo en unos instantes.'); window.location='/inicio.php'</script>";
+        echo "<script>alert('Ha superado el límite de intentos fallidos, por favor, inténtelo de nuevo en unos instantes.'); window.location='/inicio.php'</script>";
 
     }
 }else{
