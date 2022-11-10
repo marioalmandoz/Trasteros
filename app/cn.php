@@ -5,8 +5,8 @@
 <?php
   // phpinfo();
   $hostname = "db";
-  $username = "trasteros";
-  $password = "I7#g71pNiW6y";
+  $username = "admin";
+  $password = "I7g71pNiW6y";
   $db = "database";
 
   $conn = mysqli_connect($hostname,$username,$password,$db);
