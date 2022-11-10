@@ -29,6 +29,6 @@ phpmyadmin:
   ports:
     - 8890:80
   environment:
-    MYSQL_USER: admin
-    MYSQL_PASSWORD: trasteros
-    MYSQL_DATABASE: I7#g71pNiW6y
+    MYSQL_USER: trasteros
+    MYSQL_PASSWORD: I7#g71pNiW6y
+    MYSQL_DATABASE: db
