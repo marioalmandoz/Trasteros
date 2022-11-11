@@ -2,6 +2,8 @@
 //iniciar sesion y conectarse
 session_start();
 include("cn.php");
+include("log.php");
+$log = new Log("log.txt");
 //obtener datos formulario
 $email = $_POST["email"];
 $contraseña = $_POST["clave"];
@@ -39,6 +41,7 @@ if (isset($_SESSION["locked"])){
         echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
         echo "<script>alert('No se puede identificar debido a que la contraseña o el usuario son incorrectos.'); window.location='/inicio.php'</script>";
         $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
+        $log->writeLine("E", "Ha habido un error inesperado");
 
     }else {//la ejecuacion es correcta
 
@@ -59,6 +62,8 @@ if (isset($_SESSION["locked"])){
             $_SESSION['clave']=$clave;
 
             $_SESSION["login_attempts"] = 0;
+
+            $log->writeLine("I", "Todo correcto");
         }else{
             //si no existe
             $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
@@ -75,4 +80,6 @@ if (isset($_SESSION["locked"])){
         }
     }  
 }
-?>ss
+
+$log->close();
+?>
