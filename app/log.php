@@ -3,7 +3,7 @@
 class Log {
 
     private $fileLog;
-    private $path = "/var/log/html/"; 
+    private $path = "/home/mario/Trasteros/app/"; 
 
     function __construct($path)
     {
