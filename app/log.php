@@ -3,7 +3,7 @@
 class Log {
 
     private $fileLog;
-    private $path = "/home/mario/Trasteros/app/"; 
+    private $path = "/var/log/html/"; 
 
     function __construct($path)
     {
@@ -20,7 +20,7 @@ class Log {
     }
 
 }
-$log = new Log("log.txt");
+$log = new Log("error.txt");
 
 $log->writeLine("E", "Ha habido un error inesperado");
 $log->writeLine("I", "Todo correcto");
