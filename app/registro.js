@@ -17,6 +17,7 @@ form.addEventListener("submit",e=>{
 	let nom = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
     let apell = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
 	let password = /^[a-zA-Z0-9\_\-]{6,16}$/ // 6 a 12 digitos.
+    let numPass='/[0-9]/'
 	let telefono = /^\d{9}$/ // 9 números.
     let valorEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     let valorDNI = /^\d{8}[-][a-zA-Z]$/
@@ -52,10 +53,23 @@ form.addEventListener("submit",e=>{
         tfn.focus();
         fallo=true
     }
-    if(!password.test(pass1.value)){
-        alert('La contraseña no es válida: debe tener entre 6 y 16 caracteres y solo se pueden utilizar letras, números, - y _ ')
-        pass1.focus();
+    if(pass1.value = email.value){
         fallo=true
+        alert('El email y la contraseña no pueden ser iguales')
+    }
+    if((pass1.value).length()<8){
+        fallo=true
+        alert('La contraseña debe tener mínimo 8 carácteres')
+        pass1.focus();
+    }else if(!(/\d/.test(pass1.value))){
+        fallo=true
+        alert('La contraseña debe tener algún número')
+    }else if(!(/a-z/).test(pass1.value)){
+        fallo=true
+        alert('La contraseña debe tener minúsculas')
+    }else if(!(/A-Z/.test(pass1.value))){
+        fallo=true
+        alert('La contraseña debe tener mayúsculas')
     }
     if(pass2.value != pass1.value){
         alert('Las contraseñas no coinciden ')   
