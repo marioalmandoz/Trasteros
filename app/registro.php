@@ -60,7 +60,7 @@ include("cn.php");
                     <label for="transicion">E-mail</label>
                 </div>
                 <div class="grupo">
-                    <input type="password" name="clave" placeholder="Entre 6 y 16 caracteres. Solo letras, números, - y _ " id="password1" required ><span class="barra"></span>
+                    <input type="password" name="clave" placeholder="Minimo 8 carácteres. Debe contener letras(Minúsculas y Mayus) y números" id="password1" required ><span class="barra"></span>
                     <label for="transicion">Contraseña</label>
                 </div>
                 <div class="grupo">

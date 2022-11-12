@@ -15,12 +15,17 @@ form.addEventListener("submit",e=>{
     e.preventDefault()
     let fallo = false
 	let nom = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
+    let cadenaSinNumeros= /^[a-zA-Z\s]{1,40}$/ 
+    let cadenaSinMayus =/^[a-z0-9\s]{1,40}$/ 
+    let cadenaSinMinus =/^[A-Z0-9\s]{1,40}$/ 
     let apell = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
 	let password = /^[a-zA-Z0-9\_\-]{6,16}$/ // 6 a 12 digitos.
     let numPass='/[0-9]/'
 	let telefono = /^\d{9}$/ // 9 números.
     let valorEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     let valorDNI = /^\d{8}[-][a-zA-Z]$/
+    
+
 
     if(!nom.test(nombre.value)){
         alert('El nombre no es válido, recuerde solo letras y espacios')
@@ -53,23 +58,24 @@ form.addEventListener("submit",e=>{
         tfn.focus();
         fallo=true
     }
-    if(pass1.value = email.value){
+    if(!(pass1.value != email.value)){
         fallo=true
+        pass1.focus();
         alert('El email y la contraseña no pueden ser iguales')
     }
-    if((pass1.value).length()<8){
+    if((pass1.value).length<8){
         fallo=true
         alert('La contraseña debe tener mínimo 8 carácteres')
         pass1.focus();
-    }else if(!(/\d/.test(pass1.value))){
+    }else if (cadenaSinNumeros.test(pass1.value)) {
+      fallo=true
+      alert('La contraseña debe tener algún número')
+    }else if(cadenaSinMayus.test(pass1.value)){
         fallo=true
-        alert('La contraseña debe tener algún número')
-    }else if(!(/a-z/).test(pass1.value)){
+      alert('La contraseña debe tener alguna mayúscula')
+    }else if(cadenaSinMinus.test(pass1.value)){
         fallo=true
-        alert('La contraseña debe tener minúsculas')
-    }else if(!(/A-Z/.test(pass1.value))){
-        fallo=true
-        alert('La contraseña debe tener mayúsculas')
+        alert('La contraseña debe tener alguna minúscula')
     }
     if(pass2.value != pass1.value){
         alert('Las contraseñas no coinciden ')   
