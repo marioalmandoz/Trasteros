@@ -46,18 +46,18 @@ $id= $_POST["id"];
                 </thead>
                 <br><br>
                 <tbody>
-                <form action="procesar_editar.php" method="POST"class="content-table">
+                <form action="procesar_editar.php" method="POST"class="content-table" id="form">
 
                     <?php $resultado = mysqli_query($conn, "SELECT * FROM Trastero WHERE id='$id'");
                     //while para crear tabla
                     while($row = mysqli_fetch_array($resultado))  {?>
                         <tr>
                             
-                            <td><input type="text" readonly="readonly" class="" value="<?php echo $row["id"];?>" name="id"></div></td>
-                            <td><input type="text" class="" value="<?php echo $row["nombre"];?>" name="nombre"></div></td>
-                            <td><input type="text" class="" value="<?php echo $row["metroCuadrado"];?>" name="metroCuadrado"></div></td>
-                            <td><input type="text" class="" value="<?php echo $row["localizacion"];?>" name="localizacion"></div></td>
-                            <td><input type="text" class="" value="<?php echo $row["responsable"];?>" name="responsable"></div></td>
+                            <td><input type="text" readonly="readonly" class="" value="<?php echo $row["id"];?>" name="id" id="id"></div></td>
+                            <td><input type="text" class="" value="<?php echo $row["nombre"];?>" name="nombre" id="nombre"></div></td>
+                            <td><input type="text" class="" value="<?php echo $row["metroCuadrado"];?>" name="metroCuadrado" id="m2"></div></td>
+                            <td><input type="text" class="" value="<?php echo $row["localizacion"];?>" name="localizacion" id="localizacion"></div></td>
+                            <td><input type="text" class="" value="<?php echo $row["responsable"];?>" name="responsable" id="responsable"></div></td>
                             <td><button class="button" type="submit">Actualizar</button>
                     <p class="warnings" id="warnings"></p></td>
                         </tr>
@@ -65,6 +65,7 @@ $id= $_POST["id"];
                     
                 </tbody>
                 </form>
-            </ALIGN:CENTER>                             
+            </ALIGN:CENTER>    
+            <script type="text/javascript" src="anadirTrastero.js"></script>                         
         </body>
     </html>

@@ -10,7 +10,7 @@ form.addEventListener("submit",e=>{
 
     let fallo=false
     let valorId = /^\d{1,11}$/ //solo numeros, menos de 11 digitos
-    let nom = /^[a-zA-Z\s]{1,40}$/
+    let nom = /^[a-zA-Z0-9\,\s]{1,40}$/
 
     if(!valorId.test(id.value)){ //no cumple valor id
         alert('El Id debe ser un valor númerico de como máximo 11 dígitos')
@@ -33,8 +33,6 @@ form.addEventListener("submit",e=>{
         alert('La localización no puede tener ni números, ni símbolos')
         fallo=true
     }
-
-
 
 
     if(!fallo){
