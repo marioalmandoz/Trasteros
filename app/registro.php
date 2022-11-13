@@ -1,5 +1,6 @@
 <?php
     session_start(); 
+    $_SESSION["token"] = bin2hex(random_bytes(32));
     //Conexion con la base de datos e inicio de sesion
 
     //denegar xframe options
@@ -36,6 +37,7 @@ include("cn.php");
         <body>
             
                 <form action="insertar.php" method="POST" id="form">
+                <input type="hidden" name="_token" value="<?php=$_SESSION["_token"]?>" />
                 <div class="form">
                     <h1>Introduce tus datos</h1>
                 <div class="grupo">
