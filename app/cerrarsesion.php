@@ -7,6 +7,8 @@ session_start();
 session_destroy();
 ?>
 <?php
+  //denegar xframe options
+  <?php header('X-Frame-Options: DENY'); ?>
 // Iniciamos la sesion
 session_start();
 if (isset($_SESSION['nombre'])) {

@@ -9,7 +9,7 @@ $localizacion = $_POST["localizacion"];
 $responsable = $_POST["responsable"];
 
 //Actalizar los datos
-$actualizar = "UPDATE Trastero set nombre=?, metroCuadrado=?, localizacion=?, responsable=? WHERE id='$id'";
+$actualizar = "UPDATE Trastero set nombre=?, metroCuadrado=?, localizacion=?, responsable=? WHERE id=?";
 //consulta parametrizada
 //preparar
 if (!($sentencia = $conn->prepare($actualizar))) {
@@ -17,7 +17,7 @@ if (!($sentencia = $conn->prepare($actualizar))) {
 }
 
 //comprobar parametros
-if (!$sentencia->bind_param("siss", $nombre, $metroCuadrado, $localizacion, $responsable)) {
+if (!$sentencia->bind_param("isiss", $id, $nombre, $metroCuadrado, $localizacion, $responsable)) {
     echo "Falló la vinculación de parámetros: (" . $sentencia->errno . ") " . $sentencia->error;
 }
 //ejecutar
