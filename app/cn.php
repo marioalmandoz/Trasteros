@@ -1,8 +1,6 @@
 <?php
   //iniciar sesion
     session_start(); 
-    //denegar xframe options
-   header('X-Frame-Options: DENY');
 ?>
 <?php
   // phpinfo();
