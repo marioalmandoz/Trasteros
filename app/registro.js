@@ -18,6 +18,7 @@ form.addEventListener("submit",e=>{
     let cadenaSinNumeros= /^[a-zA-Z\s]{1,40}$/ 
     let cadenaSinMayus =/^[a-z0-9\s]{1,40}$/ 
     let cadenaSinMinus =/^[A-Z0-9\s]{1,40}$/ 
+    let fecha=/^[0-9\/]{10}$/
     let apell = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
 	let password = /^[a-zA-Z0-9\_\-]{6,16}$/ // 6 a 12 digitos.
     let numPass='/[0-9]/'
@@ -52,6 +53,10 @@ form.addEventListener("submit",e=>{
     }else{
         alert('El DNI no cumple el formato 11111111-A')
         fallo=true
+    }
+    if(!fecha.test(fech_nac.value)){
+        fallo=true
+        alert('La fecha solo debe tener números')
     }
     if(!telefono.test(tfn.value)){
         alert('El teléfono debe ser de 9 números')
