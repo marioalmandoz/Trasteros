@@ -1,6 +1,9 @@
 <?php
 //conexion base da datos
 include("cn.php");
+//log
+include("log.php");
+$log = new Log("log.txt");
 //obtener datos de formulario
 $nombre = $_POST["nombre"];
 $nombre= htmlspecialchars($nombre);
@@ -31,7 +34,7 @@ if (!$sentencia->bind_param("sssisss", $nombre, $apellidos, $dni, $telefono, $fe
 if (!$sentencia->execute()) {
     echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
 }else {//la ejecuacion es correcta
-
+    $log->writeLine("I", "Todo correcto prueba domingo");
     echo "<script>alert('se ha registrado el usuario con exito');
     window.location='/usuarioIdentificado.php'</script>";
     
