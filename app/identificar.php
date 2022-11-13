@@ -41,7 +41,7 @@ if (isset($_SESSION["locked"])){
         echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
         echo "<script>alert('No se puede identificar debido a que la contraseña o el usuario son incorrectos.'); window.location='/inicio.php'</script>";
         $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
-        $log->writeLine("E", "Ha habido un error inesperado");
+        $log->writeLine("E", "Ha habido un error inesperado prueba domingo");
 
     }else {//la ejecuacion es correcta
 
@@ -63,7 +63,7 @@ if (isset($_SESSION["locked"])){
 
             $_SESSION["login_attempts"] = 0;
 
-            $log->writeLine("I", "Todo correcto");
+            $log->writeLine("I", "Todo correcto prueba domingo");
         }else{
             //si no existe
             $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
