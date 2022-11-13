@@ -6,7 +6,9 @@ $id = $_POST["id"];
 $nombre = $_POST["nombre"];
 $metrosCuadrados = $_POST["metrosCuadrados"];
 $localizacion = $_POST["localizacion"];
+$localizacion=htmlspecialchars($localizacion);
 $responsable = $_POST["responsable"];
+$responsable=htmlspecialchars($responsable);
  
 // Insertar Trastero
 $insertar = "INSERT INTO Trastero(id, nombre, metroCuadrado, localizacion, responsable) VALUES (?,?,?,?,?)";

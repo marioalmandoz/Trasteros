@@ -3,6 +3,7 @@
 include("cn.php");
 //obtener datos de formulario
 $nombre = $_POST["nombre"];
+$nombre= htmlspecialchars($nombre);
 $apellidos = $_POST["apellidos"];
 $dni = $_POST["dni"];
 $telefono = $_POST["telefono"];
