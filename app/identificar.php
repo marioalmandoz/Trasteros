@@ -1,6 +1,8 @@
 <?php 
 //iniciar sesion y conectarse
 session_start();
+//denegar xframe options
+header('X-Frame-Options: DENY');
 include("cn.php");
 include("log.php");
 $log = new Log("log.txt");

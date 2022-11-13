@@ -1,14 +1,15 @@
 <?php
 // Iniciamos la sesion
 session_start();
+//denegar xframe options
+header('X-Frame-Options: DENY');
  
 
 // Destruir todo en esta sesión
 session_destroy();
 ?>
 <?php
-  //denegar xframe options
-  <?php header('X-Frame-Options: DENY'); ?>
+  
 // Iniciamos la sesion
 session_start();
 if (isset($_SESSION['nombre'])) {

@@ -1,4 +1,6 @@
 <?php
+//denegar xframe options
+header('X-Frame-Options: DENY');
 include("cn.php");
 
 //obtener datos formulario

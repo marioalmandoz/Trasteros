@@ -1,10 +1,10 @@
 <?php
   //iniciar sesion
     session_start(); 
+    //denegar xframe options
+   header('X-Frame-Options: DENY');
 ?>
 <?php
-  //denegar xframe options
-   header('X-Frame-Options: DENY');
   // phpinfo();
   $hostname = "db";
   $username = "admin";

@@ -3,6 +3,8 @@
     session_start(); 
     if (isset($_SESSION['nombre'])) {// identificado 
         //do nothing
+        //denegar xframe options
+   header('X-Frame-Options: DENY');
     } else {//no identificado
         header("Location: inicio.php");
     

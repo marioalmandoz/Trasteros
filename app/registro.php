@@ -1,6 +1,9 @@
 <?php
     session_start(); 
     //Conexion con la base de datos e inicio de sesion
+
+    //denegar xframe options
+   header('X-Frame-Options: DENY');
 ?>
 <?php
 include("cn.php");

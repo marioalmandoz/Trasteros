@@ -1,6 +1,8 @@
 <?php
 //sesion php y conexion con base de dadtos
 session_start();
+//denegar xframe options
+header('X-Frame-Options: DENY');
 include("cn.php");
 
 
