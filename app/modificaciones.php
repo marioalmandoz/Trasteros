@@ -1,4 +1,5 @@
 <?php
+ini_set("session.cookie_httponly", True);//httponly flag
     //Conexion con la base de datos e inicio de sesion
     session_start(); 
     //denegar xframe options

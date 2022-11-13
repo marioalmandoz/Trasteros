@@ -1,4 +1,5 @@
 <?php
+ini_set("session.cookie_httponly", True);//httponly flag
 //sesion php y conexion con base de dadtos
 session_start();
 //denegar xframe options
