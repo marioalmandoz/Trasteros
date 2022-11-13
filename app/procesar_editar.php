@@ -8,11 +8,11 @@ header('X-Frame-Options: DENY');
 include("cn.php");
 //obtener datos del formulario
 
-if(!isset($_POST["token"]) || !isset($_SESSION["token"])){
+if(!isset($_POST["_token"]) || !isset($_SESSION["_token"])){
     exit("No se ha puesto el token");
 }
 
-if($_POST["token"] == $_SESSION["token"]){
+if($_POST["_token"] == $_SESSION["_token"]){
     $id = $_POST["id"];
     $nombre = $_POST["nombre"];
     $metroCuadrado = $_POST["metroCuadrado"];
@@ -41,7 +41,7 @@ if($_POST["token"] == $_SESSION["token"]){
         window.location='/listado.php'</script>";
 
     }
-    unset($_SESSION["token"]);
+    unset($_SESSION["_token"]);
 }
 
 ?>
