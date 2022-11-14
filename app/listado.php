@@ -2,6 +2,8 @@
 //denegar xframe options
 header('X-Frame-Options: SAMEORIGIN');
 
+//comprobacion timeout
+include("timeout.php");
 //Conexion con la base de datos
 include("cn.php");
 ?>

@@ -1,5 +1,9 @@
 <?php
+ini_set('session.cookie_samesite', 'Strict'); //samesite cookie
+session_set_cookie_params(["SameSite" => "Strict"]); //none, lax, strict
+
 ini_set("session.cookie_httponly", True);//httponly flag
+
 //sesion php y conexion con base de dadtos
 session_start();
 //denegar xframe options

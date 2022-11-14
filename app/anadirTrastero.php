@@ -1,13 +1,16 @@
 <?php
-ini_set("session.cookie_httponly", True);//httponly flag
-//sesion php
+    ini_set("session.cookie_httponly", True);//httponly flag
+    //sesion php
     session_start(); 
     //denegar xframe options
-   header('X-Frame-Options: SAMEORIGIN');
+    header('X-Frame-Options: SAMEORIGIN');
+    //comprobacion timeout
+    include("timeout.php");
 ?>
 <?php
 //conexion con base de datos
 include("cn.php");
+
 ?>
 <!--html de añadir trastero -->
 <!DOCTYPE html>
