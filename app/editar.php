@@ -1,8 +1,12 @@
 <?php
 //denegar xframe options
+ini_set("session.cookie_httponly", True);//httponly flag
+//sesion php y conexion con base de dadtos
+session_start();
 header('X-Frame-Options: DENY');
 include("cn.php");
 
+$_SESSION["token"] = bin2hex(random_bytes(32));
 //obtener datos formulario
 $id= $_POST["id"];
 //s$trasteros= "SELECT * FROM Trastero WHERE id='$id'";
@@ -49,6 +53,7 @@ $id= $_POST["id"];
                 <br><br>
                 <tbody>
                 <form action="procesar_editar.php" method="POST"class="content-table" id="form">
+                    <input type="hidden" name="_token" value="<?php=$_SESSION["_token"]?>" />
 
                     <?php $resultado = mysqli_query($conn, "SELECT * FROM Trastero WHERE id='$id'");
                     //while para crear tabla

@@ -1,10 +1,12 @@
 <?php
+ini_set("session.cookie_httponly", True);//httponly flag
 //sesion php y conexion con base de dadtos
 session_start();
 //denegar xframe options
 header('X-Frame-Options: DENY');
 include("cn.php");
 
+$_SESSION["token"] = bin2hex(random_bytes(32));
 
 if (isset($_SESSION['nombre'])) {
     //identificado - redirigir 
@@ -38,6 +40,7 @@ if (isset($_SESSION['nombre'])) {
 
             
                 <form action="identificar.php" method="POST" id="iniciosesion">
+                <input type="hidden" name="_token" value="<?php=$_SESSION["_token"]?>" />
                     <h3 id="text">Identifícate:</h3>
                     <div class="grupo">
                         <label for="">E-mail</label>
