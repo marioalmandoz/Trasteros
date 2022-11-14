@@ -7,6 +7,10 @@ ini_set("session.cookie_httponly", True);//httponly flag
 session_start();
 header('Set-Cookie: PHPSESSID= ' . session_id() . '; SameSite=Strict; Secure; HttpOnly');
 
+
+header('X-Powered-By: Our company\'s development team');
+
+
 //denegar xframe options
 header('X-Frame-Options: SAMEORIGIN');
 
@@ -45,7 +49,7 @@ if (isset($_SESSION['nombre'])) {
                 </header>
 
             
-                <form action="identificar.php" method="POST" id="iniciosesion">
+                <form action="identificar.php" method="POST" id="form">
                 <input type="hidden" name="_token" value="<?=$_SESSION["_token"]?>" >
                     <h3 id="text">Identifícate:</h3>
                     <div class="grupo">

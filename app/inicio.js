@@ -1,5 +1,6 @@
 const email=document.getElementById("email")
 const pass=document.getElementById("contraseña")
+const form=document.getElementById("form")
 
 form.addEventListener("submit",e=>{
     e.preventDefault()
