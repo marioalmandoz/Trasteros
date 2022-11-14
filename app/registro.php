@@ -37,7 +37,7 @@ include("cn.php");
         <body>
             
                 <form action="insertar.php" method="POST" id="form">
-                <input type="hidden" name="_token" value="<?php $_SESSION["_token"]?>" />
+                <input type="hidden" name="_token" value="<?=$_SESSION["_token"]?>" />
                 <div class="form">
                     <h1>Introduce tus datos</h1>
                 <div class="grupo">
