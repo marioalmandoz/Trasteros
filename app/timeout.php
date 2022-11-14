@@ -7,7 +7,7 @@
 
     session_start();
     //Establecer tiempo maximo
-    $inactividad = 30; //tiempo maximo = 15 minutos
+    $inactividad = 900; //tiempo maximo = 15 minutos (900s)
 
     //log
     include("log.php");
@@ -19,8 +19,9 @@
         $duracionSesion = time() - $_SESSION["timeout"];
         if($duracionSesion > $inactividad){
             $log->writeLine("W", '$_SESSION["email"]' ,"Se han cerrado la sesión por inactividad");
-            echo "<script>alert('Se ha alcanzado la duración máxima de la sesión. Por favor, inicia sesión de nuevo.');
-            window.location='/cerrarsesion.php;</script>";
+            echo "<script>alert('Se ha alcanzado la duración máxima de la sesión. Por favor, inicia sesión de nuevo.');window.location='/cerrarsesion.php'</script>";
+
+            //echo "<script>alert('Se ha alcanzado la duración máxima de la sesión. Por favor, inicia sesión de nuevo.'); window.location='/cerrarsesion.php;</script>";
             //include("cerrarsesion.php");
         }
     }else{
