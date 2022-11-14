@@ -12,6 +12,7 @@ $email = $_POST["email"];
 $contraseña = $_POST["clave"];
 
 if(!isset($_POST["_token"]) || !isset($_SESSION["_token"])){
+
     exit("No se ha puesto el token");
 }
 //comprobar si esta bloqueado por limite de intentos fallidos

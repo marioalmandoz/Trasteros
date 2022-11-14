@@ -1,6 +1,6 @@
 <?php
     session_start(); 
-    $_SESSION["token"] = bin2hex(random_bytes(32));
+    $_SESSION["_token"] = bin2hex(random_bytes(32));
     //Conexion con la base de datos e inicio de sesion
 
     //denegar xframe options

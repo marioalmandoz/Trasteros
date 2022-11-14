@@ -6,7 +6,7 @@ session_start();
 header('X-Frame-Options: SAMEORIGIN');
 include("cn.php");
 
-$_SESSION["token"] = bin2hex(random_bytes(32));
+$_SESSION["_token"] = bin2hex(random_bytes(32));
 
 if (isset($_SESSION['nombre'])) {
     //identificado - redirigir 
