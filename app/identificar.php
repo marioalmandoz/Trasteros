@@ -16,6 +16,7 @@ if(!isset($_POST["_token"]) || !isset($_SESSION["_token"])){
 }
 //comprobar si esta bloqueado por limite de intentos fallidos
 if($_POST["_token"] == $_SESSION["_token"]){
+    echo "Hola";
     if (isset($_SESSION["locked"])){
         $tiempo = time() - $_SESSION["locked"];
         if ($tiempo > 300){
@@ -94,6 +95,11 @@ if($_POST["_token"] == $_SESSION["_token"]){
         }
     }
     unset($_SESSION["_token"]);
+}else{
+    echo "hola";
+    echo $_SESSION["_token"];
+    echo "\n";
+    echo $_POST["_token"];
 }
 
 $log->close();

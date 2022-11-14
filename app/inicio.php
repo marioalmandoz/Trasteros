@@ -12,7 +12,7 @@ header('X-Frame-Options: SAMEORIGIN');
 
 include("cn.php");
 
-$_SESSION["token"] = bin2hex(random_bytes(32));
+$_SESSION["_token"] = bin2hex(random_bytes(32));
 
 if (isset($_SESSION['nombre'])) {
     //identificado - redirigir 
@@ -46,7 +46,7 @@ if (isset($_SESSION['nombre'])) {
 
             
                 <form action="identificar.php" method="POST" id="iniciosesion">
-                <input type="hidden" name="_token" value="<?php $_SESSION["_token"]?>" >
+                <input type="hidden" name="_token" value="<?=$_SESSION["_token"]?>" >
                     <h3 id="text">Identifícate:</h3>
                     <div class="grupo">
                         <label for="">E-mail</label>
