@@ -71,6 +71,9 @@ if($_POST["_token"] == $_SESSION["_token"]){
                 $_SESSION['email']=$email;
                 $_SESSION['clave']=$clave;
 
+                $_SESSION["timeout"] = time();//guardar el tiempo para el timeout 
+                                                //(tiempo maximo de sesion)
+
                 $_SESSION["login_attempts"] = 0;
 
                 $log->writeLine("I",'$email',"Se ha identificado el usuario con exito");

@@ -4,6 +4,8 @@ ini_set("session.cookie_httponly", True);//httponly flag
 session_start();
 //denegar xframe options
 header('X-Frame-Options: SAMEORIGIN');
+
+
 include("cn.php");
 
 $_SESSION["_token"] = bin2hex(random_bytes(32));
