@@ -85,6 +85,6 @@ if (isset($_SESSION['nombre'])) {
                 </form>
                 -->
             </div>
-        
+            <script type="text/javascript" src="inicio.js"></script>
         </body>
     </html>
