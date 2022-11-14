@@ -4,6 +4,9 @@
 ini_set("session.cookie_httponly", True);//httponly flag
 //sesion php y conexion con base de dadtos
 session_start();
+//comprobacion timeout
+include("timeout.php");
+
 header('X-Frame-Options: SAMEORIGIN');
 include("cn.php");
 $_SESSION["_token"] = bin2hex(random_bytes(32));
