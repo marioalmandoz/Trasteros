@@ -13,7 +13,7 @@ class Log {
 
     function writeLine($type,$user, $message){
         $date = new DateTime();
-        fputs($this->fileLog, "[".$type."][".$user."][".$date->format("d-m-Y H:i:s")."]: ". $message . "\n");
+        fputs($this->fileLog, "[".$type."][".$user."][".$date->format("l, F jS Y ")."]: ". $message . "\n");
     }
 
     function close(){
@@ -21,12 +21,14 @@ class Log {
     }
 
 }
-/*
+
 $log = new Log("error.txt");
 
 $log->writeLine("E",'$usuario' ,"no se ha registrado correctamente");
 $log->writeLine("I",'$usuario',"Todo correcto");
-
+/*
 $log->close();
+date("l, F jS Y ")
+$date->format("d-m-Y H:i:s")
 */
 ?>

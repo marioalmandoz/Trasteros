@@ -53,7 +53,7 @@ $id= $_POST["id"];
                 <br><br>
                 <tbody>
                 <form action="procesar_editar.php" method="POST"class="content-table" id="form">
-                    <input type="hidden" name="_token" value="<?=$_SESSION["_token"]?>" />
+                    <input type="hidden" name="_token" value="<?$_SESSION["_token"]?>" />
 
                     <?php $resultado = mysqli_query($conn, "SELECT * FROM Trastero WHERE id='$id'");
                     //while para crear tabla
