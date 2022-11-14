@@ -5,7 +5,7 @@ ini_set("session.cookie_httponly", True);//httponly flag
 
 //sesion php y conexion con base de dadtos
 session_start();
-header('Set-Cookie: PHPSESSID= ' . session_id() . '; SameSite=Strict; Secure; HttpOnly');
+header('Set-Cookie: PHPSESSID= ' . session_id() . '; SameSite=Strict; Secure; HttpOnly');//otra vez samesite y httponly, ya que da problemas ???
 
 
 header('X-Powered-By: Our company\'s development team');
@@ -13,6 +13,10 @@ header('X-Powered-By: Our company\'s development team');
 
 //denegar xframe options
 header('X-Frame-Options: SAMEORIGIN');
+ //eliminar header x-powered-by
+header_remove('x-powered-by');
+//x content type options
+header('X-Content-Type-Options: nosniff');
 
 
 include("cn.php");

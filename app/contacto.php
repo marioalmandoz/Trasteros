@@ -8,6 +8,9 @@ session_start();
 include("timeout.php");
 
 header('X-Frame-Options: SAMEORIGIN');
+//x content type options
+header('X-Content-Type-Options: nosniff');
+
 include("cn.php");
 $_SESSION["_token"] = bin2hex(random_bytes(32));
 
@@ -16,7 +19,7 @@ $_SESSION["_token"] = bin2hex(random_bytes(32));
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'self';">
         <title> Contacta con nosotros </title>
         <link rel="stylesheet" href="contacto.css">
         <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >

@@ -4,6 +4,10 @@ ini_set("session.cookie_httponly", True);//httponly flag
     session_start(); 
     //denegar xframe options
    header('X-Frame-Options: SAMEORIGIN');
+   //eliminar header x-powered-by
+   header_remove('x-powered-by');
+   //x content type options
+    header('X-Content-Type-Options: nosniff');
 
    //comprobacion timeout
 include("timeout.php");
@@ -15,7 +19,7 @@ include("cn.php");
 <!DOCTYPE html>
     <html>
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8" http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'self';"/>
         <title>
             Modifica tus datos
         </title>

@@ -1,6 +1,8 @@
 <?php
 //denegar xframe options
 header('X-Frame-Options: SAMEORIGIN');
+//x content type options
+header('X-Content-Type-Options: nosniff');
 //Conexion con la base de datos
 include("cn.php");
 include("log.php");

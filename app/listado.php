@@ -1,7 +1,8 @@
 <?php
 //denegar xframe options
 header('X-Frame-Options: SAMEORIGIN');
-
+//x content type options
+header('X-Content-Type-Options: nosniff');
 //comprobacion timeout
 include("timeout.php");
 //Conexion con la base de datos
@@ -11,7 +12,7 @@ include("cn.php");
 <!DOCTYPE html>
     <html>
         <head>
-            <meta charset="utf-8" />
+            <meta charset="utf-8" http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'self';"/>
             <title>
                 Listado de trasteros 
             </title>
