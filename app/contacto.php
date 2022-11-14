@@ -8,6 +8,9 @@ session_start();
 include("timeout.php");
 
 header('X-Frame-Options: SAMEORIGIN');
+//x content type options
+header('X-Content-Type-Options: nosniff');
+
 include("cn.php");
 $_SESSION["_token"] = bin2hex(random_bytes(32));
 

@@ -1,7 +1,8 @@
 <?php
 //denegar xframe options
 header('X-Frame-Options: SAMEORIGIN');
-
+//x content type options
+header('X-Content-Type-Options: nosniff');
 //comprobacion timeout
 include("timeout.php");
 //Conexion con la base de datos

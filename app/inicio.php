@@ -5,10 +5,12 @@ ini_set("session.cookie_httponly", True);//httponly flag
 
 //sesion php y conexion con base de dadtos
 session_start();
-header('Set-Cookie: PHPSESSID= ' . session_id() . '; SameSite=Strict; Secure; HttpOnly');
+header('Set-Cookie: PHPSESSID= ' . session_id() . '; SameSite=Strict; Secure; HttpOnly');//otra vez samesite y httponly, ya que da problemas ???
 
 //denegar xframe options
 header('X-Frame-Options: SAMEORIGIN');
+//x content type options
+header('X-Content-Type-Options: nosniff');
 
 
 include("cn.php");
