@@ -5,7 +5,7 @@ ini_set("session.cookie_httponly", True);//httponly flag
     if (isset($_SESSION['nombre'])) {// identificado 
         //do nothing
         //denegar xframe options
-   header('X-Frame-Options: DENY');
+   header('X-Frame-Options: SAMEORIGIN');
     } else {//no identificado
         header("Location: inicio.php");
     

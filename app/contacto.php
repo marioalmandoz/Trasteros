@@ -4,7 +4,7 @@
 ini_set("session.cookie_httponly", True);//httponly flag
 //sesion php y conexion con base de dadtos
 session_start();
-header('X-Frame-Options: DENY');
+header('X-Frame-Options: SAMEORIGIN');
 include("cn.php");
 $_SESSION["token"] = bin2hex(random_bytes(32));
 
@@ -59,7 +59,7 @@ $_SESSION["token"] = bin2hex(random_bytes(32));
             </div>
             <!-- enviar mensaje -->
             <form action="https://formsubmit.co/alquilaTuTrasteroSGSSI@gmail.com" method="POST" id="form">
-                <input type="hidden" name="_token" value="<?php=$_SESSION["_token"]?>" />
+                <input type="hidden" name="_token" value="<?php $_SESSION["_token"]?>" />
                 <input type="email" name="email" placeholder="Correo electrónico: ejemplo@servidor.extensión" id="email" class="campo" required>
                 <input type="text" name="asunto" placeholder="Escribe el asunto del mensaje" class="campo" required>
 

@@ -3,7 +3,7 @@ ini_set("session.cookie_httponly", True);//httponly flag
 //iniciar sesion y conectarse
 session_start();
 //denegar xframe options
-header('X-Frame-Options: DENY');
+header('X-Frame-Options: SAMEORIGIN');
 include("cn.php");
 include("log.php");
 $log = new Log("log.txt");

@@ -1,7 +1,7 @@
 <?php
 
 //denegar xframe options
-header('X-Frame-Options: DENY');
+header('X-Frame-Options: SAMEORIGIN');
 
 //conexion con la base de datos 
 include("cn.php");
