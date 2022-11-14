@@ -95,11 +95,6 @@ if($_POST["_token"] == $_SESSION["_token"]){
         }
     }
     unset($_SESSION["_token"]);
-}else{
-    echo "hola";
-    echo $_SESSION["_token"];
-    echo "\n";
-    echo $_POST["_token"];
 }
 
 $log->close();
