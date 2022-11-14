@@ -4,6 +4,8 @@ ini_set("session.cookie_httponly", True);//httponly flag
 //sesion php y conexion con base de dadtos
 session_start();
 header('X-Frame-Options: SAMEORIGIN');
+//x content type options
+header('X-Content-Type-Options: nosniff');
 //conexion con la base de datos 
 include("cn.php");
 //obtener datos del formulario

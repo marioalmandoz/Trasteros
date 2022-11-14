@@ -6,6 +6,8 @@ ini_set("session.cookie_httponly", True);//httponly flag
    header('X-Frame-Options: SAMEORIGIN');
    //eliminar header x-powered-by
    header_remove('x-powered-by');
+   //x content type options
+    header('X-Content-Type-Options: nosniff');
 
    //comprobacion timeout
 include("timeout.php");
