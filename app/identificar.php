@@ -4,6 +4,8 @@ ini_set("session.cookie_httponly", True);//httponly flag
 session_start();
 //denegar xframe options
 header('X-Frame-Options: SAMEORIGIN');
+header('X-Content-Type-Options: nosniff');
+
 include("cn.php");
 include("log.php");
 $log = new Log("log.txt");
