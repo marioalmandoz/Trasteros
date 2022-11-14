@@ -16,6 +16,7 @@ if(!isset($_POST["_token"]) || !isset($_SESSION["_token"])){
 }
 //comprobar si esta bloqueado por limite de intentos fallidos
 if($_POST["_token"] == $_SESSION["_token"]){
+    echo "Hola";
     if (isset($_SESSION["locked"])){
         $tiempo = time() - $_SESSION["locked"];
         if ($tiempo > 300){
@@ -69,6 +70,9 @@ if($_POST["_token"] == $_SESSION["_token"]){
                 $_SESSION['fechaN']=$fechaN;
                 $_SESSION['email']=$email;
                 $_SESSION['clave']=$clave;
+
+                $_SESSION["timeout"] = time();//guardar el tiempo para el timeout 
+                                                //(tiempo maximo de sesion)
 
                 $_SESSION["login_attempts"] = 0;
 

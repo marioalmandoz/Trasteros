@@ -42,7 +42,7 @@ if($_POST["_token"] == $_SESSION["_token"]){
     if (!$sentencia->execute()) {
         echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
     }else {//la ejecuacion es correcta
-        $log->writeLine("I", "Todo correcto prueba domingo");
+        $log->writeLine("I",'$email',"Todo correcto prueba domingo");
         echo "<script>alert('se ha registrado el usuario con exito');
         window.location='/usuarioIdentificado.php'</script>";
 
