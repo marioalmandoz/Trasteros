@@ -27,7 +27,6 @@ if (isset($_SESSION['nombre'])) {
             </title>
             <link rel="stylesheet" type="text/css" href="inicio.css"/>
             <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
-
         </head>
 
         <body>
