@@ -9,6 +9,8 @@ header('Set-Cookie: PHPSESSID= ' . session_id() . '; SameSite=Strict; Secure; Ht
 
 //denegar xframe options
 header('X-Frame-Options: SAMEORIGIN');
+ //eliminar header x-powered-by
+header_remove('x-powered-by');
 
 
 include("cn.php");
