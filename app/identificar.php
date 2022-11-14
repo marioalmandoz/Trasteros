@@ -20,7 +20,6 @@ if (isset($_SESSION["locked"])){
     }else{
         //continuar con el bloqueo
         echo "<script>alert('Ha superado el límite de intentos fallidos, por favor, inténtelo de nuevo en unos instantes.'); window.location='/inicio.php'</script>";
-
     }
 }else{
 
@@ -30,6 +29,7 @@ if (isset($_SESSION["locked"])){
 
     if (!($sentencia = $conn->prepare("SELECT * FROM Usuario WHERE email = ?"))) {
         echo "Falló la preparación: (" . $mysqli->errno . ") " . $mysqli->error;
+        $log->writeLine("W",'$email' ,"Falló la preparación");
     }
 
     //comprobar parametros
@@ -37,13 +37,14 @@ if (isset($_SESSION["locked"])){
         $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
 
         echo "Falló la vinculación de parámetros: (" . $sentencia->errno . ") " . $sentencia->error;
+        $log->writeLine("W",'$email' ,"Falló la vinculación de parámetros");
     }
     //ejecutar
     if (!$sentencia->execute()) {
         echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
         echo "<script>alert('No se puede identificar debido a que la contraseña o el usuario son incorrectos.'); window.location='/inicio.php'</script>";
         $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
-        $log->writeLine("E", "Ha habido un error inesperado prueba domingo");
+        $log->writeLine("W",'$email' ,"El usuario o la contraseña son incorrectos");
 
     }else {//la ejecuacion es correcta
 
@@ -65,7 +66,7 @@ if (isset($_SESSION["locked"])){
 
             $_SESSION["login_attempts"] = 0;
 
-            $log->writeLine("I", "Todo correcto prueba domingo");
+            $log->writeLine("C",'$email',"Se ha identificado el usuario correctamente");
         }else{
             //si no existe
             $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
@@ -75,8 +76,10 @@ if (isset($_SESSION["locked"])){
                 $_SESSION["locked"] = time(); //bloquear y guardar tiempo
                 echo "<script>alert('No se puede identificar debido a que la contraseña o el usuario son incorrectos.'); </script>";
                 echo "<script>alert('Ha superado el límite de intentos fallidos, por favor, inténtelo de nuevo en unos instantes.');window.location='/inicio.php'</script>";
+                $log->writeLine("E",'$email' ,"El usuario o la contraseña son incorrectos y se ha bloqueado el usuario por fallar en la identificación varias veces");
             }else{
                 echo "<script>alert('No se puede identificar debido a que la contraseña o el usuario son incorrectos.'); window.location='/inicio.php'</script>";
+                $log->writeLine("E",'$email' ,"El usuario o la contraseña son incorrectos");
             }
             
         }

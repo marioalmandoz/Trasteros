@@ -26,22 +26,26 @@ $insertar = "INSERT INTO Usuario(nombre, apellido, DNI, telefono, fechaN, email,
 //preparar
 if (!($sentencia = $conn->prepare($insertar))) {
     echo "Falló la preparación: (" . $mysqli->errno . ") " . $mysqli->error;
+    $log->writeLine("E",'$email' ,"Ha habido un fallo de preparación, en el registro");
 }
 
 //comprobar parametros
 if (!$sentencia->bind_param("sssisss", $nombre, $apellidos, $dni, $telefono, $fechaN, $email, $clave)) {
     echo "Falló la vinculación de parámetros: (" . $sentencia->errno . ") " . $sentencia->error;
+    $log->writeLine("E",'$email' ,"Falló la vinculación de parámetros, en el registro");
 }
 
 //ejecutar
 if (!$sentencia->execute()) {
     echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
+    $log->writeLine("E",'$email' ,"Falló la ejecución de registro");
 }else {//la ejecuacion es correcta
     $log->writeLine("I", "Todo correcto prueba domingo");
     echo "<script>alert('se ha registrado el usuario con exito');
     window.location='/usuarioIdentificado.php'</script>";
+    $log->writeLine("E",'$email' ,"Se ha registrado un nuevo usuario");
     
 }
 
-
+$log->close();
 ?>

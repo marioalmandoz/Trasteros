@@ -4,7 +4,8 @@ session_start();
 header('X-Frame-Options: DENY');
 
 include("cn.php");
-
+include("log.php");
+$log = new Log("log.txt");
 //obtener los datos del formulario
 $nombre = $_POST["nombre"];
 $apellidos = $_POST["apellidos"];
@@ -28,9 +29,11 @@ if($resultado) {
     $_SESSION['email']=$email;
     $_SESSION['clave']=$clave;
     echo "<script>alert('Se han modificado los datos del usuario con exito');window.location='/usuarioIdentificado.php'</script>";
+    $log->writeLine("E",'$email' ,"Se han modificado los datos del usuario");
 }else{
     //operacion incorrecta
     echo "<script>alert('No se han podido modificar los datos del usuario'); window.location='/inicio.php'</script>";
+    $log->writeLine("E",'$email' ,"No se han podido modificar los datos del usuario");
 }
-
+$log->close();
 ?>
