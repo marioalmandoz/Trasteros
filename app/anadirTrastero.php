@@ -16,7 +16,7 @@ include("cn.php");
 <!DOCTYPE html>
     <html>
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8" http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'self';"/>
         <title>
             Añada su trastero
         </title>
