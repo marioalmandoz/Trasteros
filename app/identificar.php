@@ -72,7 +72,7 @@ if($_POST["_token"] == $_SESSION["_token"]){
                 $_SESSION['telefono']=$telefono;
                 $_SESSION['fechaN']=$fechaN;
                 $_SESSION['email']=$email;
-                $_SESSION['clave']=$clave;
+                //$_SESSION['clave']=$clave;
 
                 $_SESSION["timeout"] = time();//guardar el tiempo para el timeout 
                                                 //(tiempo maximo de inactividad)
