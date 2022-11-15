@@ -75,7 +75,7 @@ if($_POST["_token"] == $_SESSION["_token"]){
                 $_SESSION['clave']=$clave;
 
                 $_SESSION["timeout"] = time();//guardar el tiempo para el timeout 
-                                                //(tiempo maximo de sesion)
+                                                //(tiempo maximo de inactividad)
 
                 $_SESSION["login_attempts"] = 0;
 

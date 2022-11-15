@@ -20,14 +20,18 @@
         //comprobar cuanto tiempo ha pasado
         $duracionSesion = time() - $_SESSION["timeout"];
         if($duracionSesion > $inactividad){
+            //ha pasado el tiempo maximo --> cerrar sesion
             $log->writeLine("W", '$_SESSION["email"]' ,"Se han cerrado la sesión por inactividad");
-            echo "<script>alert('Se ha alcanzado la duración máxima de la sesión. Por favor, inicia sesión de nuevo.');window.location='/cerrarsesion.php'</script>";
+            echo "<script>alert('Se ha alcanzado el tiempo máximo de inactividad. Por favor, inicia sesión de nuevo.');window.location='/cerrarsesion.php'</script>";
 
             //echo "<script>alert('Se ha alcanzado la duración máxima de la sesión. Por favor, inicia sesión de nuevo.'); window.location='/cerrarsesion.php;</script>";
             //include("cerrarsesion.php");
+        }else{
+            //no ha alcanzado el tiempo maximo
+            //ha cambiado de pagina o ha recargado antes de alcanzar el maximo, entonces ha habido actividad --> reiniciar contador
+            $_SESSION["timeout"] = time(); //guardar tiempo actual
         }
     }else{
-        //no hacer nada
-        //
+        //nada
     }
 ?>
