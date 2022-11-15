@@ -1,5 +1,7 @@
 <?php
 ini_set("session.cookie_httponly", True);//httponly flag
+ini_set('session.cookie_samesite', 'Strict'); //samesite cookie
+
 //inicio de sesion php
     session_start(); 
     //denegar xframe options
