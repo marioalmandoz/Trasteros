@@ -10,6 +10,8 @@ include("timeout.php");
 header('X-Frame-Options: SAMEORIGIN');
 //x content type options
 header('X-Content-Type-Options: nosniff');
+ //eliminar header x-powered-by
+ header_remove('x-powered-by');
 
 include("cn.php");
 $_SESSION["_token"] = bin2hex(random_bytes(32));

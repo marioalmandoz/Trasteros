@@ -4,6 +4,8 @@
     session_start();
     //denegar xframe options
     //header('X-Frame-Options: SAMEORIGIN');
+     //eliminar header x-powered-by
+    //header_remove('x-powered-by');
 
     session_start();
     //Establecer tiempo maximo

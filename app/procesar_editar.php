@@ -6,6 +6,8 @@ session_start();
 header('X-Frame-Options: SAMEORIGIN');
 //x content type options
 header('X-Content-Type-Options: nosniff');
+ //eliminar header x-powered-by
+ header_remove('x-powered-by');
 //conexion con la base de datos 
 include("cn.php");
 //obtener datos del formulario

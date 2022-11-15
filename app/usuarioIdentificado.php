@@ -8,6 +8,8 @@ ini_set("session.cookie_httponly", True);//httponly flag
         header('X-Frame-Options: SAMEORIGIN');
         //x content type options
         header('X-Content-Type-Options: nosniff');
+         //eliminar header x-powered-by
+        header_remove('x-powered-by');
         //comprobacion timeout --> cerrar sesion automaticamente
         include("timeout.php");
     } else {//no identificado
