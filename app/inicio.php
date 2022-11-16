@@ -53,7 +53,7 @@ if (isset($_SESSION['nombre'])) {
                 </header>
 
             
-                <form action="identificar.php" method="POST" id="form">
+                <form action="identificar.php" method="POST" id="iniciosesion">
                 <input type="hidden" name="_token" value="<?=$_SESSION["_token"]?>" >
                     <h3 id="text">Identifícate:</h3>
                     <div class="grupo">
