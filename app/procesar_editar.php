@@ -10,6 +10,10 @@ header('X-Content-Type-Options: nosniff');
  header_remove('x-powered-by');
 //conexion con la base de datos 
 include("cn.php");
+//LOG
+include("log.php");
+$log = new Log("log.txt");
+
 //obtener datos del formulario
 if(!isset($_POST["_token"]) || !isset($_SESSION["_token"])){
 
