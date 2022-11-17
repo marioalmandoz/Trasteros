@@ -5,7 +5,7 @@ ini_set("session.cookie_httponly", True);//httponly flag
 
 //sesion php y conexion con base de dadtos
 session_start();
-header('Set-Cookie: PHPSESSID= ' . session_id() . '; SameSite=Strict; Secure; HttpOnly');//establecer las opciones para el cookie phpsessid porque da problemas
+header('Set-Cookie: PHPSESSID= ' . session_id() . '; SameSite=Strict; HttpOnly');//establecer las opciones para el cookie phpsessid porque da problemas
 
 
 header('X-Powered-By: Our company\'s development team');
