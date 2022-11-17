@@ -72,7 +72,7 @@ include("cn.php");
                     <label for="transicion">E-mail</label>
                 </div>
                 <div class="grupo">
-                    <input type="password" name="clave" id="password1" placeholder="Entre 6 y 16 caracteres. Solo letras, números, - y _ " value="<?php echo $_SESSION['clave'];?>" required><span class="barra"></span>
+                    <input type="password" name="clave" id="password1" placeholder="minio 8. Solo letras, números, - y _ " value="<?php echo $_SESSION['clave'];?>" required><span class="barra"></span>
                     <label for="transicion">Contraseña</label>
                 </div>
                 <div class="grupo">
