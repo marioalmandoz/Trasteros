@@ -22,11 +22,11 @@ session_destroy();
 session_start();
 if (isset($_SESSION['nombre'])) {
     echo "<script>alert('no se ha cerrado la sesion');window.history.go(-1);</script>";
-    $log->writeLine("E",'$email' ,"No se ha cerrado la sesión");
+    $log->writeLine("E",$email ,"No se ha cerrado la sesión");
 } else {
     echo "<script>alert('Se ha cerrado la sesión con éxito.');
     window.history.go(-1);</script>";
-    $log->writeLine("E",'$email' ,"Se han cerrado la sesión");
+    $log->writeLine("E",$email,"Se ha cerrado la sesión");
 
 }
 $log->close();

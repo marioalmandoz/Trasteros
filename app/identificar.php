@@ -39,7 +39,7 @@ if($_POST["_token"] == $_SESSION["_token"]){
 
         if (!($sentencia = $conn->prepare("SELECT * FROM Usuario WHERE email = ?"))) {
             echo "Falló la preparación: (" . $mysqli->errno . ") " . $mysqli->error;
-            $log->writeLine("W",'$email', "Falló la preparacion al identificarse");
+            $log->writeLine("W",$email, "Falló la preparacion al identificarse");
         }
 
         //comprobar parametros
@@ -47,14 +47,14 @@ if($_POST["_token"] == $_SESSION["_token"]){
             $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
 
             echo "Falló la vinculación de parámetros: (" . $sentencia->errno . ") " . $sentencia->error;
-            $log->writeLine("W",'$email', "Falló la vinculacion de parametros al identificarse");
+            $log->writeLine("W",$email, "Falló la vinculacion de parametros al identificarse");
         }
         //ejecutar
         if (!$sentencia->execute()) {
             echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
             echo "<script>alert('No se puede identificar debido a que la contraseña o el usuario son incorrectos.'); window.location='/inicio.php'</script>";
             $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
-            $log->writeLine("W",'$email', "Falló la ejecución al identificarse");
+            $log->writeLine("W",$email, "Falló la ejecución al identificarse");
 
         }else {//la ejecuacion es correcta
 
@@ -79,7 +79,7 @@ if($_POST["_token"] == $_SESSION["_token"]){
 
                 $_SESSION["login_attempts"] = 0;
 
-                $log->writeLine("I",'$email',"Se ha identificado el usuario con exito");
+                $log->writeLine("I",$email,"Se ha identificado el usuario con exito");
             }else{
                 $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
 
@@ -88,10 +88,10 @@ if($_POST["_token"] == $_SESSION["_token"]){
                     $_SESSION["locked"] = time(); //bloquear y guardar tiempo
                     echo "<script>alert('No se puede identificar debido a que la contraseña o el usuario son incorrectos.'); </script>";
                     echo "<script>alert('Ha superado el límite de intentos fallidos, por favor, inténtelo de nuevo en unos instantes.');window.location='/inicio.php'</script>";
-                    $log->writeLine("E",'$email', "El usuario o la contraseña no son correctos en 3 intentos, bloqueo de 5 minutos");
+                    $log->writeLine("E",$email, "El usuario o la contraseña no son correctos en 3 intentos, bloqueo de 5 minutos");
                 }else{
                     echo "<script>alert('No se puede identificar debido a que la contraseña o el usuario son incorrectos.'); window.location='/inicio.php'</script>";
-                    $log->writeLine("E",'$email', "El usuario o la contraseña no son correctos");
+                    $log->writeLine("E",$email, "El usuario o la contraseña no son correctos");
                 }
 
             }

@@ -21,14 +21,14 @@ class Log {
     }
 
 }
-/*
+
 $log = new Log("error.txt");
 
-$log->writeLine("E",'$usuario' ,"no se ha registrado correctamente");
+//$log->writeLine("E",'$usuario' ,"no se ha registrado correctamente");
 $log->writeLine("I",'$usuario',"Todo correcto");
 
 $log->close();
-date("l, F jS Y ")
-$date->format("d-m-Y H:i:s")
-*/
+//date("l, F jS Y ")
+//$date->format("d-m-Y H:i:s")
+//*/
 ?>
