@@ -10,8 +10,7 @@ header('X-Content-Type-Options: nosniff');
  header_remove('x-powered-by');
 
 include("cn.php");
-
-$_SESSION["token"] = bin2hex(random_bytes(32));
+$_SESSION["_token"] = bin2hex(random_bytes(32));
 //obtener datos formulario
 $id= $_POST["id"];
 //s$trasteros= "SELECT * FROM Trastero WHERE id='$id'";
@@ -20,7 +19,7 @@ $id= $_POST["id"];
 <!DOCTYPE html>
     <html>
         <head>
-            <meta charset="utf-8" http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'self';"/>
+            <meta charset="utf-8" http-equiv="Content-Security-Policy" content="img-src https://*; child-src 'self';"/>
             <title>
                 Editar trastero
             </title>
@@ -58,7 +57,7 @@ $id= $_POST["id"];
                 <br><br>
                 <tbody>
                 <form action="procesar_editar.php" method="POST"class="content-table" id="form">
-                    <input type="hidden" name="_token" value="<?=$_SESSION["_token"]?>" />
+                    <input type="hidden" name="_token" value="<?=$_SESSION["_token"]?>" >
 
                     <?php $resultado = mysqli_query($conn, "SELECT * FROM Trastero WHERE id='$id'");
                     //while para crear tabla
