@@ -27,7 +27,7 @@ if($_POST["_token"] == $_SESSION["_token"]){
     $responsable = $_POST["responsable"];
 
     //Actalizar los datos
-    $actualizar = "UPDATE Trastero set nombre=?, metroCuadrado=?, localizacion=?, responsable=? WHERE id=?";
+    $actualizar = "UPDATE Trastero set nombre=?, metroCuadrado=?, localizacion=?, responsable=? WHERE id='$id'";
     //consulta parametrizada
     //preparar
     if (!($sentencia = $conn->prepare($actualizar))) {
@@ -36,7 +36,7 @@ if($_POST["_token"] == $_SESSION["_token"]){
     }
 
     //comprobar parametros
-    if (!$sentencia->bind_param("isiss", $id, $nombre, $metroCuadrado, $localizacion, $responsable)) {
+    if (!$sentencia->bind_param("siss", $nombre, $metroCuadrado, $localizacion, $responsable)) {
         echo "Falló la vinculación de parámetros: (" . $sentencia->errno . ") " . $sentencia->error;
         $log->writeLine("W",$_SESSION['email']  ,"Falló la vinculación de parámetros al editar un Trastero");
     }

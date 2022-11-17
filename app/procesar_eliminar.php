@@ -9,6 +9,7 @@ header('X-Content-Type-Options: nosniff');
 include("cn.php");
 include("log.php");
 $log = new Log("log.txt");
+
 $email= $_SESSION['email'];
 // id obtenido del listado.php
 $id = $_GET["id"];

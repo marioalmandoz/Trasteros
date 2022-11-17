@@ -4,7 +4,7 @@ header('X-Frame-Options: SAMEORIGIN');
 //x content type options
 header('X-Content-Type-Options: nosniff');
  //eliminar header x-powered-by
- header_remove('x-powered-by');
+header_remove('x-powered-by');
 //comprobacion timeout
 include("timeout.php");
 //Conexion con la base de datos
@@ -14,7 +14,7 @@ include("cn.php");
 <!DOCTYPE html>
     <html>
         <head>
-            <meta charset="utf-8" http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'self';"/>
+            <meta charset="utf-8" http-equiv="Content-Security-Policy" content="img-src https://*; child-src 'self';"/>
             <title>
                 Listado de trasteros 
             </title>
@@ -81,11 +81,10 @@ include("cn.php");
                                 <input type="submit" class="botonp" value="Editar contenido" > <!-- href="editar.php?id=?php echo $row["id"];?>" -->
                             </form>
                                 <input type="button" onClick="eliminar(<?php echo $row['id']; ?>)"  class="botonp" value="Eliminar Trastero">
-                                
                             </td>
                         </tr>
                         <script>
-                            function eliminar(id) {
+                                function eliminar(id) {
                                 if (confirm("¿Está seguro de que desea eliminar este trastero?")){
                                     window.location.href='procesar_eliminar.php?id=' +id+'';
                                     return true;
