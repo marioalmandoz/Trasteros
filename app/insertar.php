@@ -35,21 +35,21 @@ if($_POST["_token"] == $_SESSION["_token"]){
     //preparar
     if (!($sentencia = $conn->prepare($insertar))) {
         echo "Falló la preparación: (" . $mysqli->errno . ") " . $mysqli->error;
-        $log->writeLine("E",$email,"Falló la preparacion al insertar un usuario nuevo");
+        $log->writeLine($log->getRealIP(),"E",$email,"Falló la preparacion al insertar un usuario nuevo");
     }
 
     //comprobar parametros
     if (!$sentencia->bind_param("sssisss", $nombre, $apellidos, $dni, $telefono, $fechaN, $email, $clave)) {
         echo "Falló la vinculación de parámetros: (" . $sentencia->errno . ") " . $sentencia->error;
-        $log->writeLine("W",$email,"Falló la vinculacion de parámetros al insertar un usuario nuevo");
+        $log->writeLine($log->getRealIP(),"W",$email,"Falló la vinculacion de parámetros al insertar un usuario nuevo");
     }
     //ejecutar
     if (!$sentencia->execute()) {
         echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
-        $log->writeLine("E",$email,"Falló la eecución al insertar un usuario nuevo");
+        $log->writeLine($log->getRealIP(),"E",$email,"Falló la eecución al insertar un usuario nuevo");
 
     }else {//la ejecuacion es correcta
-        $log->writeLine("I",$email,"Se haregistrado correctamente");
+        $log->writeLine($log->getRealIP(),"I",$email,"Se haregistrado correctamente");
         echo "<script>alert('se ha registrado el usuario con exito');
         window.location='/usuarioIdentificado.php'</script>";
 
