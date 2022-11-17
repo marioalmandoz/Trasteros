@@ -27,23 +27,23 @@ $insertar = "INSERT INTO Trastero(id, nombre, metroCuadrado, localizacion, respo
 //preparar
 if (!($sentencia = $conn->prepare($insertar))) {
     echo "Falló la preparación: (" . $mysqli->errno . ") " . $mysqli->error;
-    $log->writeLine("W",$_SESSION['email']  ,"Falló la preparación al insertar un Trastero");
+    $log->writeLine($log->getRealIP(),"W",$_SESSION['email']  ,"Falló la preparación al insertar un Trastero");
 }
 //comprobar parametros
 if (!$sentencia->bind_param("isiss", $id, $nombre, $metrosCuadrados, $localizacion, $responsable)) {
     echo "Falló la vinculación de parámetros: (" . $sentencia->errno . ") " . $sentencia->error;
-    $log->writeLine("W",$_SESSION['email'] ,"Falló la vinclación de parametros al insertar un Trastero");
+    $log->writeLine($log->getRealIP(),"W",$_SESSION['email'] ,"Falló la vinclación de parametros al insertar un Trastero");
 }
 
 //ejecutar
 if (!$sentencia->execute()) {
     echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
     echo "<script>alert('no se puede añadir el trastero'); window.history.go(-1);</script>";
-    $log->writeLine("W",$_SESSION['email'] ,"Falló la ejecución al insertar un Trastero");
+    $log->writeLine($log->getRealIP(),"W",$_SESSION['email'] ,"Falló la ejecución al insertar un Trastero");
 }else {//la ejecuacion es correcta
     echo "<script>alert('se ha añadido el trastero con exito');
     window.location='/usuarioIdentificado.php'</script>";
-    $log->writeLine("C",$_SESSION['email'] ,"Se ha añadidio un Trastero correctamente");   
+    $log->writeLine($log->getRealIP(),"C",$_SESSION['email'] ,"Se ha añadidio un Trastero correctamente");   
 }
 
 
