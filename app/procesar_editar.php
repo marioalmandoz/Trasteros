@@ -32,24 +32,24 @@ if($_POST["_token"] == $_SESSION["_token"]){
     //preparar
     if (!($sentencia = $conn->prepare($actualizar))) {
         echo "Falló la preparación: (" . $mysqli->errno . ") " . $mysqli->error;
-        $log->writeLine("W",$_SESSION['email']  ,"Falló la preparación al editar un Trastero");
+        $log->writeLine($log->getRealIP(),"W",$_SESSION['email']  ,"Falló la preparación al editar un Trastero");
     }
 
     //comprobar parametros
     if (!$sentencia->bind_param("siss", $nombre, $metroCuadrado, $localizacion, $responsable)) {
         echo "Falló la vinculación de parámetros: (" . $sentencia->errno . ") " . $sentencia->error;
-        $log->writeLine("W",$_SESSION['email']  ,"Falló la vinculación de parámetros al editar un Trastero");
+        $log->writeLine($log->getRealIP(),"W",$_SESSION['email']  ,"Falló la vinculación de parámetros al editar un Trastero");
     }
     //ejecutar
     if (!$sentencia->execute()) {
         echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
         echo "<script>alert('no se puedieron actualizar los datos'); window.history.go(-1);</script>";
-        $log->writeLine("E",$_SESSION['email']  ,"Falló la ejecución al editar un trastero");
+        $log->writeLine($log->getRealIP(),"E",$_SESSION['email']  ,"Falló la ejecución al editar un trastero");
 
     }else {//la ejecucion es correcta
         echo "<script>alert('se han cambiado los datos con exito');
         window.location='/listado.php'</script>";
-        $log->writeLine("C",$_SESSION['email'] ,"Se han cambiado los datos de un trastero");
+        $log->writeLine($log->getRealIP(),"C",$_SESSION['email'] ,"Se han cambiado los datos de un trastero");
     }
     unset($_SESSION["_token"]);
 }
