@@ -39,7 +39,7 @@ if (!$sentencia->bind_param("isiss", $id, $nombre, $metrosCuadrados, $localizaci
 if (!$sentencia->execute()) {
     echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
     echo "<script>alert('no se puede añadir el trastero'); window.history.go(-1);</script>";
-    $log->writeLine("E",$email ,"Falló la ejecución al insertar un Trastero");
+    $log->writeLine("W",$email ,"Falló la ejecución al insertar un Trastero");
 }else {//la ejecuacion es correcta
     echo "<script>alert('se ha añadido el trastero con exito');
     window.location='/usuarioIdentificado.php'</script>";

@@ -22,12 +22,12 @@ class Log {
 
 }
 
-$log = new Log("error.txt");
+//$log = new Log("error.txt");
 
 //$log->writeLine("E",'$usuario' ,"no se ha registrado correctamente");
-$log->writeLine("I",'$usuario',"Todo correcto");
+//$log->writeLine("I",'$usuario',"Todo correcto");
 
-$log->close();
+//$log->close();
 //date("l, F jS Y ")
 //$date->format("d-m-Y H:i:s")
 //*/

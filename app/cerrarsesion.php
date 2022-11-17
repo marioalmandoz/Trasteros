@@ -26,7 +26,7 @@ if (isset($_SESSION['nombre'])) {
 } else {
     echo "<script>alert('Se ha cerrado la sesión con éxito.');
     window.history.go(-1);</script>";
-    $log->writeLine("E",$email,"Se ha cerrado la sesión");
+    $log->writeLine("C",$email,"Se ha cerrado la sesión");
 
 }
 $log->close();

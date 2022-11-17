@@ -79,7 +79,7 @@ if($_POST["_token"] == $_SESSION["_token"]){
 
                 $_SESSION["login_attempts"] = 0;
 
-                $log->writeLine("I",$email,"Se ha identificado el usuario con exito");
+                $log->writeLine("C",$email,"Se ha identificado el usuario con exito");
             }else{
                 $_SESSION["login_attempts"] += 1; //incrementear contador de intentos fallidos
 
