@@ -11,6 +11,10 @@ header('X-Content-Type-Options: nosniff');
 //conexion con la base de datos 
 include("cn.php");
 //obtener datos del formulario
+if(!isset($_POST["_token"]) || !isset($_SESSION["_token"])){
+
+    exit("No se ha puesto el token");
+}
 if($_POST["_token"] == $_SESSION["_token"]){
     $id = $_POST["id"];
     $nombre = $_POST["nombre"];
@@ -38,7 +42,7 @@ if($_POST["_token"] == $_SESSION["_token"]){
         echo "<script>alert('no se puedieron actualizar los datos'); window.history.go(-1);</script>";
         $log->writeLine("E",$_SESSION['email']  ,"Falló la ejecución al editar un trastero");
 
-    }else {//la ejecuacion es correcta
+    }else {//la ejecucion es correcta
         echo "<script>alert('se han cambiado los datos con exito');
         window.location='/listado.php'</script>";
         $log->writeLine("C",$_SESSION['email'] ,"Se han cambiado los datos de un trastero");

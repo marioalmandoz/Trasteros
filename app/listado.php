@@ -81,9 +81,10 @@ include("cn.php");
                                 <input type="submit" class="botonp" value="Editar contenido" > <!-- href="editar.php?id=?php echo $row["id"];?>" -->
                             </form>
                                 <input type="button" onClick="eliminar(<?php echo $row['id']; ?>)"  class="botonp" value="Eliminar Trastero">
+                                
                             </td>
                         </tr>
-                        <script language="javascript">
+                        <script>
                             function eliminar(id) {
                                 if (confirm("¿Está seguro de que desea eliminar este trastero?")){
                                     window.location.href='procesar_eliminar.php?id=' +id+'';
