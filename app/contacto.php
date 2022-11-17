@@ -25,7 +25,6 @@ $_SESSION["_token"] = bin2hex(random_bytes(32));
         <title> Contacta con nosotros </title>
         <link rel="stylesheet" href="contacto.css">
         <link rel = " shortcut icon " href = " ./favicon.png " type = " image / x - icon " >
-        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     </head>
     <header>
             <div class="texto">
