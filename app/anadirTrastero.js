@@ -30,7 +30,7 @@ form.addEventListener("submit",e=>{
         fallo=true
     }
     if(!nom.test(loc.value)){
-        alert('La localización no puede tener ni números, ni símbolos')
+        alert('La localización no puede tener símbolos')
         fallo=true
     }
 
